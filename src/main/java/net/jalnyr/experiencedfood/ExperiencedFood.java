@@ -1,6 +1,7 @@
 package net.jalnyr.experiencedfood;
 
 import com.mojang.logging.LogUtils;
+import net.jalnyr.experiencedfood.block.ModBlocks;
 import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -34,6 +35,7 @@ public class ExperiencedFood
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in

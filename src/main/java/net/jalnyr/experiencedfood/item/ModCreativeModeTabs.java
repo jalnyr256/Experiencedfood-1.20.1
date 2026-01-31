@@ -1,6 +1,7 @@
 package net.jalnyr.experiencedfood.item;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
+import net.jalnyr.experiencedfood.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,6 +21,8 @@ public class ModCreativeModeTabs {
                     .displayItems((pParametres, pOutput) -> {
                         pOutput.accept(ModItems.BAGUETTE.get());
                         pOutput.accept(ModItems.PEACEOFCARROT.get());
+                        pOutput.accept(ModItems.ONION.get());
+                        pOutput.accept(ModBlocks.ONION_CROP.get());
                     })
                     .build());
 
