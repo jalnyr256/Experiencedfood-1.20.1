@@ -1,6 +1,7 @@
 package net.jalnyr.experiencedfood;
 
 import com.mojang.logging.LogUtils;
+import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,6 +30,8 @@ public class ExperiencedFood
     public ExperiencedFood(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 

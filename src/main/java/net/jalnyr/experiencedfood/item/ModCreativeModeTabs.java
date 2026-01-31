@@ -1,0 +1,30 @@
+package net.jalnyr.experiencedfood.item;
+
+import net.jalnyr.experiencedfood.ExperiencedFood;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModCreativeModeTabs {
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExperiencedFood.MOD_ID);
+
+    public static final RegistryObject<CreativeModeTab> EXPERIENCEDFOOD = CREATIVE_MODE_TABS.register("experiencedfood",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PEACEOFCARROT.get()))
+                    .title(Component.translatable("creativetab.experiencedfood"))
+                    .displayItems((pParametres, pOutput) -> {
+                        pOutput.accept(ModItems.BAGUETTE.get());
+                        pOutput.accept(ModItems.PEACEOFCARROT.get());
+                    })
+                    .build());
+
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TABS.register(eventBus);
+    }
+
+}
