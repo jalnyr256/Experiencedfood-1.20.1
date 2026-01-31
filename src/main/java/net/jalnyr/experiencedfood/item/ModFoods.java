@@ -1,0 +1,8 @@
+package net.jalnyr.experiencedfood.item;
+
+import net.minecraft.world.food.FoodProperties;
+
+public class ModFoods {
+    public static final FoodProperties BAGUETTE = new FoodProperties.Builder().nutrition( 8).saturationMod(0.8f).build();
+    public static final FoodProperties PIECEOFCARROT = new FoodProperties.Builder().nutrition( 2).saturationMod(0.1f).build();
+}

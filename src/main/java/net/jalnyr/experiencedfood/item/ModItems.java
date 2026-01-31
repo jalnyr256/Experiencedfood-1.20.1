@@ -11,9 +11,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExperiencedFood.MOD_ID);
     public static final RegistryObject<Item> BAGUETTE = ITEMS.register("baguette",
-            ()-> new Item(new Item.Properties()));
+            ()-> new Item(new Item.Properties().food(ModFoods.BAGUETTE)));
     public static final RegistryObject<Item> PEACEOFCARROT = ITEMS.register("peaceofcarrot",
-            ()-> new Item(new Item.Properties()));
+            ()-> new Item(new Item.Properties().food(ModFoods.PIECEOFCARROT)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
