@@ -1,7 +1,9 @@
 package net.jalnyr.experiencedfood.item;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
+import net.jalnyr.experiencedfood.block.ModBlocks;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,7 +17,7 @@ public class ModItems {
     public static final RegistryObject<Item> PEACEOFCARROT = ITEMS.register("peaceofcarrot",
             ()-> new Item(new Item.Properties().food(ModFoods.PIECEOFCARROT)));
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
-            ()-> new Item(new Item.Properties().food(ModFoods.ONION)));
+            ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties().food(ModFoods.ONION)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
