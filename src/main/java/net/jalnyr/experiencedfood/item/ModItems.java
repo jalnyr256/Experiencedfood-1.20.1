@@ -29,7 +29,7 @@ public class ModItems {
     public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
             ()-> new Item(new Item.Properties().food(ModFoods.CHEESE)));
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
-            ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties().food(ModFoods.ONION)));
+            ()-> new Item( new  Item.Properties().food(ModFoods.ONION)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

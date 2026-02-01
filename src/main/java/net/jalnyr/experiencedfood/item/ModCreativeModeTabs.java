@@ -23,7 +23,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.PEACEOFCARROT.get());
                         pOutput.accept(ModItems.ONION.get());
                         pOutput.accept(ModItems.MEAT_SUPREME.get());
-                        pOutput.accept(ModBlocks.ONION_CROP.get());
                         pOutput.accept(ModItems.SALAD.get());
                         pOutput.accept(ModItems.CHEESE.get());
                         pOutput.accept(ModItems.MAYONAISE.get());
