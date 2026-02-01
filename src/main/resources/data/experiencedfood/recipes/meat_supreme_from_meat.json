@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#xy",
+    "zm ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "x": {
+      "item": "minecraft:cooked_beef"
+    },
+    "y": {
+      "item": "minecraft:cooked_mutton"
+    },
+    "z": {
+      "item": "minecraft:cooked_porkchop"
+    },
+    "m": {
+      "item": "minecraft:cooked_rabbit"
+    }
+  },
+    "result": {
+      "item": "experiencedfood:meat_supreme"
+    }
+}

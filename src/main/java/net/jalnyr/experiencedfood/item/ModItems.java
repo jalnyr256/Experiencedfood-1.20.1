@@ -14,8 +14,12 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, ExperiencedFood.MOD_ID);
     public static final RegistryObject<Item> BAGUETTE = ITEMS.register("baguette",
             ()-> new Item(new Item.Properties().food(ModFoods.BAGUETTE)));
+    public static final RegistryObject<Item> ONIONSEED = ITEMS.register("onionseeds",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PEACEOFCARROT = ITEMS.register("peaceofcarrot",
             ()-> new Item(new Item.Properties().food(ModFoods.PIECEOFCARROT)));
+    public static final RegistryObject<Item> MEAT_SUPREME = ITEMS.register("meat_supreme",
+            ()-> new Item(new Item.Properties().food(ModFoods.MEAT_SUPREME)));
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
             ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties().food(ModFoods.ONION)));
     public static void register(IEventBus eventBus) {

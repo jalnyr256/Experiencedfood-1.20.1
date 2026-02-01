@@ -19,7 +19,7 @@ public class OnionCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.ONION.get();
+        return ModItems.ONIONSEED.get();
     }
 
     @Override

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#xy",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "x": {
+      "item": "minecraft:glow_berries"
+    },
+    "y": {
+      "item": "minecraft:sweet_berries"
+    }
+  },
+  "result": {
+    "item": "experiencedfood:onion"
+  }
+}
