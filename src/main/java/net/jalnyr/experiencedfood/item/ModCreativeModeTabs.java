@@ -24,6 +24,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ONION.get());
                         pOutput.accept(ModItems.MEAT_SUPREME.get());
                         pOutput.accept(ModBlocks.ONION_CROP.get());
+                        pOutput.accept(ModItems.SALAD.get());
+                        pOutput.accept(ModItems.CHEESE.get());
+                        pOutput.accept(ModItems.MAYONAISE.get());
+                        pOutput.accept(ModItems.HAMBURGER.get());
                     })
                     .build());
 

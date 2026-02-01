@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#xy",
+    "zmi",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "experiencedfood:baguette"
+    },
+    "x": {
+      "item": "experiencedfood:cheese"
+    },
+    "y": {
+      "item": "minecraft:cooked_beef"
+    },
+    "z": {
+      "item": "experiencedfood:salad"
+    },
+    "m": {
+      "item": "experiencedfood:onion"
+    },
+    "i": {
+      "item": "experiencedfood:mayonaise"
+    }
+  },
+    "result": {
+      "item": "experiencedfood:hamburger"
+    }
+}

@@ -16,10 +16,18 @@ public class ModItems {
             ()-> new Item(new Item.Properties().food(ModFoods.BAGUETTE)));
     public static final RegistryObject<Item> ONIONSEED = ITEMS.register("onionseeds",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SALAD = ITEMS.register("salad",
+            ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MAYONAISE = ITEMS.register("mayonaise",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PEACEOFCARROT = ITEMS.register("peaceofcarrot",
             ()-> new Item(new Item.Properties().food(ModFoods.PIECEOFCARROT)));
     public static final RegistryObject<Item> MEAT_SUPREME = ITEMS.register("meat_supreme",
             ()-> new Item(new Item.Properties().food(ModFoods.MEAT_SUPREME)));
+    public static final RegistryObject<Item> HAMBURGER = ITEMS.register("hamburger",
+            ()-> new Item(new Item.Properties().food(ModFoods.HAMBURGER)));
+    public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
+            ()-> new Item(new Item.Properties().food(ModFoods.CHEESE)));
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
             ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties().food(ModFoods.ONION)));
     public static void register(IEventBus eventBus) {
