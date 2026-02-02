@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "x# ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:carrot"
+    },
+    "x": {
+      "item": "minecraft:bowl"
+    }
+  },
+    "result": {
+      "item": "experiencedfood:carrot_soup"
+    }
+}

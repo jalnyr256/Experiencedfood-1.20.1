@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CHEESE.get());
                         pOutput.accept(ModItems.MAYONAISE.get());
                         pOutput.accept(ModItems.HAMBURGER.get());
+                        pOutput.accept(ModItems.CARROT_SOUP.get());
+                        pOutput.accept(ModItems.TURNIP.get());
                     })
                     .build());
 
