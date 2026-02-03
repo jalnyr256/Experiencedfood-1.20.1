@@ -5,7 +5,6 @@ import net.jalnyr.experiencedfood.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,6 +28,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.HAMBURGER.get());
                         pOutput.accept(ModItems.CARROT_SOUP.get());
                         pOutput.accept(ModItems.TURNIP.get());
+
+                        pOutput.accept(ModBlocks.TURNIP_CRATE.get());
+                        pOutput.accept(ModBlocks.CRATE.get());
+                        pOutput.accept(ModBlocks.ONION_CRATE.get());
                     })
                     .build());
 

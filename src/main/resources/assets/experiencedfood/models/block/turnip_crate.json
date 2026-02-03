@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "experiencedfood:block/turnip_crate"
+  }
+}

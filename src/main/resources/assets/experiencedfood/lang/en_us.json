@@ -13,7 +13,9 @@
 
 
 
-  "block.experiencedfood.onioncrop": "Onioncrop",
+  "block.experiencedfood.turnip_crate": "Turnip Crate",
+  "block.experiencedfood.crate": "Crate",
+  "block.experiencedfood.onion_crate": "Onion Crate",
 
   "creativetab.experiencedfood": "Experienced Food"
 }

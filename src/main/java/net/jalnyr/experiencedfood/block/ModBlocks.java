@@ -1,16 +1,11 @@
 package net.jalnyr.experiencedfood.block;
 
-import com.google.common.eventbus.EventBus;
 import net.jalnyr.experiencedfood.ExperiencedFood;
 import net.jalnyr.experiencedfood.item.ModItems;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +18,12 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExperiencedFood.MOD_ID);
 
+    public static final RegistryObject<Block> TURNIP_CRATE = registerBlock("turnip_crate",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistryObject<Block> ONION_CRATE = registerBlock("onion_crate",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistryObject<Block> CRATE = registerBlock("crate",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
@@ -31,9 +32,6 @@ public class ModBlocks {
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
-    public static final RegistryObject<Block> TURNIP_BLOCK = registerBlock("turnip_block",
-            ()-> new FlowerBlock(()-> MobEffects.GLOWING, 5, BlockBehaviour.Properties.copy(Blocks.TORCHFLOWER).noCollission().noOcclusion()));
-
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
     }

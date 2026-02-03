@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "experiencedfood:onion_crate"
+    }
+  ],
+  "result": {
+    "item": "experiencedfood:onion",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "experiencedfood:turnip_crate"
+    }
+  ],
+  "result": {
+    "item": "experiencedfood:turnip",
+    "count": 3
+  }
+}
