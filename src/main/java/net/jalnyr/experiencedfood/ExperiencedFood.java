@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.jalnyr.experiencedfood.block.ModBlocks;
 import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
+import net.jalnyr.experiencedfood.loot.ModLootModifiers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,11 +35,13 @@ public class ExperiencedFood
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
