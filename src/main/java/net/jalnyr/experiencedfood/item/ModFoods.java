@@ -11,4 +11,6 @@ public class ModFoods {
     public static final FoodProperties CHEESE = new FoodProperties.Builder().nutrition( 4).saturationMod(0.2f).build();
     public static final FoodProperties MEAT_SUPREME = new FoodProperties.Builder().nutrition( 16).saturationMod(2f).build();
     public static final FoodProperties HAMBURGER = new FoodProperties.Builder().nutrition( 16).saturationMod(2f).build();
+    public static final FoodProperties CABBAGE = new FoodProperties.Builder().nutrition( 4).saturationMod(0.4f).build();
+    public static final FoodProperties BAKED_CABBAGE = new FoodProperties.Builder().nutrition( 8).saturationMod(0.8f).build();
 }

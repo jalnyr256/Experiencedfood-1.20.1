@@ -28,6 +28,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("onion_from_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.ONION.get()));
+        add("kelp_from_cabbage", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.KELP).build(),
+                LootItemRandomChanceCondition.randomChance(0.1f).build()}, ModItems.CABBAGE.get()));
         add("turnip_from_plains", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village_weaponsmith")).build() }, ModItems.TURNIP.get()));
         add("onion_from_plains", new AddItemModifier(new LootItemCondition[] {

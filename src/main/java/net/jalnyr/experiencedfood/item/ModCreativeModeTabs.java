@@ -28,6 +28,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.HAMBURGER.get());
                         pOutput.accept(ModItems.CARROT_SOUP.get());
                         pOutput.accept(ModItems.TURNIP.get());
+                        pOutput.accept(ModItems.CABBAGE.get());
+                        pOutput.accept(ModItems.BAKED_CABBAGE.get());
 
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());
