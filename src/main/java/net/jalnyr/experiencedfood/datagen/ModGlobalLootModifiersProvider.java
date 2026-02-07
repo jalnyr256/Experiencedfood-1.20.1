@@ -19,6 +19,15 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
+        add("turnip_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.TURNIP.get()));
+        add("salad_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.SALAD.get()));
+        add("onion_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.ONION.get()));
         add("turnip_from_plains", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village_weaponsmith")).build() }, ModItems.TURNIP.get()));
         add("onion_from_plains", new AddItemModifier(new LootItemCondition[] {
