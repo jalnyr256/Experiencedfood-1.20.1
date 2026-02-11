@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExperiencedFood.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> EXPERIENCEDFOOD = CREATIVE_MODE_TABS.register("experiencedfood",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PEACEOFCARROT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HAMBURGER.get()))
                     .title(Component.translatable("creativetab.experiencedfood"))
                     .displayItems((pParametres, pOutput) -> {
                         pOutput.accept(ModItems.BAGUETTE.get());
@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.TURNIP.get());
                         pOutput.accept(ModItems.CABBAGE.get());
                         pOutput.accept(ModItems.BAKED_CABBAGE.get());
+                        pOutput.accept(ModItems.CABBAGE_ROLL.get());
 
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());

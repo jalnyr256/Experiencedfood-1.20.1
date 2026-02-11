@@ -13,4 +13,5 @@ public class ModFoods {
     public static final FoodProperties HAMBURGER = new FoodProperties.Builder().nutrition( 16).saturationMod(2f).build();
     public static final FoodProperties CABBAGE = new FoodProperties.Builder().nutrition( 4).saturationMod(0.4f).build();
     public static final FoodProperties BAKED_CABBAGE = new FoodProperties.Builder().nutrition( 8).saturationMod(0.8f).build();
+    public static final FoodProperties CABBAGE_ROLL = new FoodProperties.Builder().nutrition( 12).saturationMod(0.12f).build();
 }

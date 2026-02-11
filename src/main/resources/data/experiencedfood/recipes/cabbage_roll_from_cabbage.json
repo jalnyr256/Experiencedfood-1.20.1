@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#x ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "x": {
+      "item": "experiencedfood:cabbage"
+    }
+  },
+    "result": {
+      "item": "experiencedfood:cabbage_roll"
+    }
+}
