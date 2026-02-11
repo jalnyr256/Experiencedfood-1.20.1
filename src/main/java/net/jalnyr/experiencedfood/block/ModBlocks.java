@@ -1,6 +1,7 @@
 package net.jalnyr.experiencedfood.block;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
+import net.jalnyr.experiencedfood.block.custom.OnionCropBlock;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -29,8 +30,8 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
     public static final RegistryObject<Block> CRATE = registerBlock("crate",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BARREL)));
-    public static final RegistryObject<Block> ONION_CROP = registerBlock("onion_crop",
-            ()-> new FlowerBlock(MobEffects.FIRE_RESISTANCE, 4, BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
+            ()-> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

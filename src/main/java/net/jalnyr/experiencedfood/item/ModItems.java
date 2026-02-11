@@ -43,6 +43,8 @@ public class ModItems {
             ()-> new Item( new  Item.Properties().food(ModFoods.BAKED_CABBAGE)));
     public static final RegistryObject<Item> CABBAGE_ROLL = ITEMS.register("cabbage_roll",
             ()-> new Item( new  Item.Properties().food(ModFoods.CABBAGE_ROLL)));
+    public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
+            ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties()));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
