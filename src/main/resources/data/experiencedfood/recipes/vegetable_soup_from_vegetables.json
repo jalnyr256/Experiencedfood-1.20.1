@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#xy",
+    "z  ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bowl"
+    },
+    "x": {
+      "item": "experiencedfood:turnip"
+    },
+    "y": {
+      "item": "experiencedfood:onion"
+    },
+    "z": {
+      "item": "experiencedfood:peaceofcarrot"
+    }
+  },
+    "result": {
+      "item": "experiencedfood:vegetable_soup"
+    }
+}
