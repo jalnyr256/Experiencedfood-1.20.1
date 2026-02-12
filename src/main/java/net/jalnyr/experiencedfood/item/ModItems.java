@@ -18,7 +18,7 @@ public class ModItems {
     public static final RegistryObject<Item> BAGUETTE = ITEMS.register("baguette",
             ()-> new Item(new Item.Properties().food(ModFoods.BAGUETTE)));
     public static final RegistryObject<Item> SALAD = ITEMS.register("salad",
-            ()-> new Item(new Item.Properties()));
+            ()-> new ItemNameBlockItem(ModBlocks.SALAD_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> MAYONAISE = ITEMS.register("mayonaise",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARROT_SWORD = ITEMS.register("carrot_sword",
@@ -45,6 +45,7 @@ public class ModItems {
             ()-> new Item( new  Item.Properties().food(ModFoods.CABBAGE_ROLL)));
     public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
             ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

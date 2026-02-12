@@ -32,6 +32,8 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             ()-> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> SALAD_CROP = BLOCKS.register("salad_crop",
+            ()-> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

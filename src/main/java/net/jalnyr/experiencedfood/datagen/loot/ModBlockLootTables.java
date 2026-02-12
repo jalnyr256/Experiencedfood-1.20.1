@@ -36,7 +36,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.ONION_CROP.get(), createCropDrops(ModBlocks.ONION_CROP.get(), ModItems.ONION.get(),
                 ModItems.ONION_SEEDS.get(), lootitemcondition$builder));
 
+
     }
+
 
 
     @Override
