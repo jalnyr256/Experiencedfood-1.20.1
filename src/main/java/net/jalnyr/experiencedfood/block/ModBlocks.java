@@ -2,6 +2,7 @@ package net.jalnyr.experiencedfood.block;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
 import net.jalnyr.experiencedfood.block.custom.OnionCropBlock;
+import net.jalnyr.experiencedfood.block.custom.TurnipCropBlock;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -32,7 +33,11 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             ()-> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",
+            ()-> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> SALAD_CROP = BLOCKS.register("salad_crop",
+            ()-> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> CABBAGE_CROP = BLOCKS.register("cabbage_crop",
             ()-> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -10,5 +10,5 @@
       "condition": "minecraft:random_chance"
     }
   ],
-  "item": "experiencedfood:cabbage"
+  "item": "experiencedfood:cabbage_seeds"
 }

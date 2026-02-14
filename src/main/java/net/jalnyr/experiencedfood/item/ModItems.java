@@ -47,6 +47,10 @@ public class ModItems {
             ()-> new Item( new  Item.Properties().food(ModFoods.CABBAGE_ROLL)));
     public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
             ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties()));
+    public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
+            ()-> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new  Item.Properties()));
+    public static final RegistryObject<Item> CABBAGE_SEEDS = ITEMS.register("cabbage_seeds",
+            ()-> new ItemNameBlockItem(ModBlocks.CABBAGE_CROP.get(), new  Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

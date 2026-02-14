@@ -23,7 +23,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         makeOnionCrop((CropBlock) ModBlocks.ONION_CROP.get(), "onion_stage", "onion_stage");
-        makeSaladCrop((CropBlock) ModBlocks.SALAD_CROP.get(), "salad_stage", "salad_stage");
     }
 
 
@@ -37,19 +36,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((OnionCropBlock) block).getAgeProperty()),
                 new ResourceLocation(ExperiencedFood.MOD_ID, "block/" + textureName + state.getValue(((OnionCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
-        return models;
-    }
-    public void makeSaladCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> saladStates(state, block, modelName, textureName);
-
-        getVariantBuilder(block).forAllStates(function);
-    }
-
-    private ConfiguredModel[] saladStates(BlockState state, CropBlock block, String modelName, String textureName) {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SaladCropBlock) block).getAgeProperty()),
-                new ResourceLocation(ExperiencedFood.MOD_ID, "block/" + textureName + state.getValue(((SaladCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

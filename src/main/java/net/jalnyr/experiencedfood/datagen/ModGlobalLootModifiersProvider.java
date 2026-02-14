@@ -21,7 +21,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     protected void start() {
         add("turnip_from_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.TURNIP.get()));
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.TURNIP_SEEDS.get()));
         add("salad_from_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.SALAD.get()));
@@ -30,7 +30,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.ONION_SEEDS.get()));
         add("kelp_from_cabbage", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.KELP).build(),
-                LootItemRandomChanceCondition.randomChance(0.11f).build()}, ModItems.CABBAGE.get()));
+                LootItemRandomChanceCondition.randomChance(0.11f).build()}, ModItems.CABBAGE_SEEDS.get()));
         add("turnip_from_plains", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village_weaponsmith")).build() }, ModItems.TURNIP.get()));
         add("onion_from_plains", new AddItemModifier(new LootItemCondition[] {
