@@ -2,8 +2,10 @@ package net.jalnyr.experiencedfood.item;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
 import net.jalnyr.experiencedfood.block.ModBlocks;
+import net.jalnyr.experiencedfood.entity.ModEntities;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -51,6 +53,9 @@ public class ModItems {
             ()-> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> CABBAGE_SEEDS = ITEMS.register("cabbage_seeds",
             ()-> new ItemNameBlockItem(ModBlocks.CABBAGE_CROP.get(), new  Item.Properties()));
+
+    public static final RegistryObject<Item> CARROT_GOLEM_SPAWN_EGG = ITEMS.register("carrot_golem_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntities.CARROT_GOLEM, 0x1e9630, 0xc1d1c5, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

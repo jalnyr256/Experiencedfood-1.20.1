@@ -2,9 +2,12 @@ package net.jalnyr.experiencedfood;
 
 import com.mojang.logging.LogUtils;
 import net.jalnyr.experiencedfood.block.ModBlocks;
+import net.jalnyr.experiencedfood.entity.ModEntities;
+import net.jalnyr.experiencedfood.entity.client.CarrotGolemRenderer;
 import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.jalnyr.experiencedfood.loot.ModLootModifiers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +39,7 @@ public class ExperiencedFood
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModEntities.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -73,12 +77,10 @@ public class ExperiencedFood
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.CARROT_GOLEM.get(), CarrotGolemRenderer::new);
         }
     }
 }
