@@ -77,7 +77,7 @@ public class PikeEntity extends AbstractFish {
 
     @Override
     protected SoundEvent getFlopSound() {
-        return null;
+        return SoundEvents.FROG_DEATH;
     }
 
     public static AttributeSupplier.Builder CreateAttributes() {

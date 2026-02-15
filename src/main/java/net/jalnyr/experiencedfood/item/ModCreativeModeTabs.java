@@ -36,6 +36,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CABBAGE_SEEDS.get());
                         pOutput.accept(ModItems.VEGETABLE_SOUP.get());
                         pOutput.accept(ModItems.CARROT_GOLEM_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.RAW_PIKE.get());
+                        pOutput.accept(ModItems.COOKED_PIKE.get());
 
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());
