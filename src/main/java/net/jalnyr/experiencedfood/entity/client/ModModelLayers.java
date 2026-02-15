@@ -7,5 +7,8 @@ import net.minecraft.resources.ResourceLocation;
 public class ModModelLayers {
     public static final ModelLayerLocation CARROT_GOLEM_LAYER = new ModelLayerLocation(
             new ResourceLocation(ExperiencedFood.MOD_ID, "carrot_golem_layer"), "main");
+    public static final ModelLayerLocation PIKE_LAYER = new ModelLayerLocation(
+            new ResourceLocation(ExperiencedFood.MOD_ID, "pike_layer"), "main");
+
 
 }

@@ -1,44 +1,46 @@
 package net.jalnyr.experiencedfood.entity.custom;
 
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.behavior.Swim;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.TargetGoal;
+import net.minecraft.world.entity.animal.AbstractFish;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Rabbit;
+import net.minecraft.world.entity.animal.Squid;
+import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CarrotBlock;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import org.jetbrains.annotations.Nullable;
 
-public class CarrotGolemEntity extends Animal {
-    public CarrotGolemEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+public class PikeEntity extends AbstractFish {
+    public PikeEntity(EntityType<? extends AbstractFish> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        this.setPathfindingMalus(BlockPathTypes.WATER, 0.0F);
     }
+    private float tx;
+    private float ty;
+    private float tz;
+
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
-
-
     @Override
     public void tick() {
         super.tick();
 
-        if(this.level().isClientSide()) {
+        if (this.level().isClientSide()) {
             setupAnimationStates();
         }
     }
@@ -47,6 +49,7 @@ public class CarrotGolemEntity extends Animal {
         if(this.idleAnimationTimeout <= 0) {
             this.idleAnimationTimeout = this.random.nextInt(40) + 80;
             this.idleAnimationState.start(this.tickCount);
+
         } else {
             --this.idleAnimationTimeout;
         }
@@ -55,24 +58,26 @@ public class CarrotGolemEntity extends Animal {
     @Override
     protected void updateWalkAnimation(float pPartialTick) {
         float f;
-        if(this.getPose() == Pose.STANDING) {
-            f = Math.min(pPartialTick * 6F, 1f);
+        if (this.getPose() == Pose.SWIMMING) {
+            f = Math.min(pPartialTick = 6F, 1f);
         } else {
-            f = 0f;
+            f = 0;
         }
 
         this.walkAnimation.update(f, 0.2f);
     }
 
-
-
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new RemoveBlockGoal(Blocks.CARROTS, this, 2f, 10));
+        this.goalSelector.addGoal(1, new TryFindWaterGoal(this));
         this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.1D));
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 3f));
+        this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 10, 7));
+
+    }
+
+    @Override
+    protected SoundEvent getFlopSound() {
+        return null;
     }
 
     public static AttributeSupplier.Builder CreateAttributes() {
@@ -82,11 +87,6 @@ public class CarrotGolemEntity extends Animal {
                 .add(Attributes.FOLLOW_RANGE, 10D);
 
     }
-    @Override
-    public @Nullable AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return null;
-    }
-
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
         return SoundEvents.CROP_PLANTED;
@@ -102,4 +102,8 @@ public class CarrotGolemEntity extends Animal {
         return SoundEvents.FROG_DEATH;
     }
 
+    @Override
+    public ItemStack getBucketItemStack() {
+        return null;
+    }
 }

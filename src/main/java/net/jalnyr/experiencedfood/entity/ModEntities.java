@@ -1,7 +1,9 @@
 package net.jalnyr.experiencedfood.entity;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
+import net.jalnyr.experiencedfood.entity.client.PikeRenderer;
 import net.jalnyr.experiencedfood.entity.custom.CarrotGolemEntity;
+import net.jalnyr.experiencedfood.entity.custom.PikeEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +20,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<CarrotGolemEntity>> CARROT_GOLEM =
             ENTITY_TYPES.register("carrot_golem", ()-> EntityType.Builder.of(CarrotGolemEntity::new, MobCategory.CREATURE)
                     .sized(1.2f, 1.7f).build("carrot_golem"));
+    public static final RegistryObject<EntityType<PikeEntity>> PIKE =
+            ENTITY_TYPES.register("pike", ()-> EntityType.Builder.of(PikeEntity::new, MobCategory.WATER_AMBIENT)
+                    .sized(1f, 0.3f).build("pike"));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
