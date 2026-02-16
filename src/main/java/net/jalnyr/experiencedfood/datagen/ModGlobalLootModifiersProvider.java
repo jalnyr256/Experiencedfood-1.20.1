@@ -2,6 +2,7 @@ package net.jalnyr.experiencedfood.datagen;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
 import net.jalnyr.experiencedfood.item.ModItems;
+import net.jalnyr.experiencedfood.loot.AddFishingItemModifier;
 import net.jalnyr.experiencedfood.loot.AddItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,12 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.11f).build()}, ModItems.CABBAGE_SEEDS.get()));
         add("turnip_from_plains", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village_weaponsmith")).build() }, ModItems.TURNIP.get()));
+
+
+        add("pike_from_fishing", new AddFishingItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("gameplay/fishing")).build() }, ModItems.RAW_PIKE.get()));
+
+
         add("onion_from_plains", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village_armorer")).build() }, ModItems.ONION.get()));
         add("turnip_from_taiga", new AddItemModifier(new LootItemCondition[] {
