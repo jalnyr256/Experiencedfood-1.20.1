@@ -60,6 +60,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> CARROT_GOLEM_SPAWN_EGG = ITEMS.register("carrot_golem_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.CARROT_GOLEM, 0x1e9630, 0xc1d1c5, new Item.Properties()));
+    public static final RegistryObject<Item> PIKE_SPAWN_EGG = ITEMS.register("pike_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntities.PIKE, 0x1e3630, 0xc6d1c5, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

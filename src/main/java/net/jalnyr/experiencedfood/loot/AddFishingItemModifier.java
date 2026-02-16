@@ -33,7 +33,7 @@ public class AddFishingItemModifier extends LootModifier {
                 return generatedLoot;
             }
         }
-        if(context.getRandom().nextFloat() < 0.17f) { // 50% WAY TOO HIGH!
+        if(context.getRandom().nextFloat() < 0.25f) { // 50% WAY TOO HIGH!
             generatedLoot.clear();
             generatedLoot.add(new ItemStack(this.item));
         }
