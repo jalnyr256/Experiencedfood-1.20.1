@@ -43,6 +43,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());
                         pOutput.accept(ModBlocks.ONION_CRATE.get());
+                        pOutput.accept(ModBlocks.FISH_CRATE.get());
                     })
                     .build());
 

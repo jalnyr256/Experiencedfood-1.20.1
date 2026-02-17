@@ -31,6 +31,8 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
     public static final RegistryObject<Block> CRATE = registerBlock("crate",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BARREL)));
+    public static final RegistryObject<Block> FISH_CRATE = registerBlock("fish_crate",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             ()-> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",

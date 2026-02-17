@@ -9,6 +9,7 @@ public class Perch<T extends Entity> extends EntityModel<T> {
 	private final ModelPart perch;
 	private final ModelPart body;
 	private final ModelPart tail;
+	private final ModelPart evaa2;
 	private final ModelPart selkaeva;
 	private final ModelPart selkaeva2;
 	private final ModelPart evaa;
@@ -17,6 +18,7 @@ public class Perch<T extends Entity> extends EntityModel<T> {
 		this.perch = root.getChild("perch");
 		this.body = this.perch.getChild("body");
 		this.tail = this.body.getChild("tail");
+		this.evaa2 = this.tail.getChild("evaa2");
 		this.selkaeva = this.body.getChild("selkaeva");
 		this.selkaeva2 = this.body.getChild("selkaeva2");
 		this.evaa = this.body.getChild("evaa");
@@ -33,9 +35,11 @@ public class Perch<T extends Entity> extends EntityModel<T> {
 
 		PartDefinition tail = body.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(8, 13).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -3.0F, 6.0F));
 
-		PartDefinition eva2_r1 = tail.addOrReplaceChild("eva2_r1", CubeListBuilder.create().texOffs(12, 17).addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.7854F, 1.5708F));
+		PartDefinition evaa2 = tail.addOrReplaceChild("evaa2", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		PartDefinition eva1_r1 = tail.addOrReplaceChild("eva1_r1", CubeListBuilder.create().texOffs(4, 17).addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.7854F, -1.5708F));
+		PartDefinition eva2_r1 = evaa2.addOrReplaceChild("eva2_r1", CubeListBuilder.create().texOffs(12, 17).addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.7854F, 1.5708F));
+
+		PartDefinition eva1_r1 = evaa2.addOrReplaceChild("eva1_r1", CubeListBuilder.create().texOffs(4, 17).addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.7854F, -1.5708F));
 
 		PartDefinition selkaeva = body.addOrReplaceChild("selkaeva", CubeListBuilder.create().texOffs(14, 13).addBox(0.0F, -2.0F, -2.0F, 0.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -5.0F, 0.0F));
 
