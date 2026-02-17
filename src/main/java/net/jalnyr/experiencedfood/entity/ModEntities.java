@@ -3,6 +3,7 @@ package net.jalnyr.experiencedfood.entity;
 import net.jalnyr.experiencedfood.ExperiencedFood;
 import net.jalnyr.experiencedfood.entity.client.PikeRenderer;
 import net.jalnyr.experiencedfood.entity.custom.CarrotGolemEntity;
+import net.jalnyr.experiencedfood.entity.custom.PerchEntity;
 import net.jalnyr.experiencedfood.entity.custom.PikeEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -23,6 +24,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<PikeEntity>> PIKE =
             ENTITY_TYPES.register("pike", ()-> EntityType.Builder.of(PikeEntity::new, MobCategory.WATER_AMBIENT)
                     .sized(1f, 0.3f).build("pike"));
+    public static final RegistryObject<EntityType<PerchEntity>> PERCH =
+            ENTITY_TYPES.register("perch", ()-> EntityType.Builder.of(PerchEntity::new, MobCategory.WATER_AMBIENT)
+                    .sized(1f, 0.3f).build("perch"));
 
 
     public static void register(IEventBus eventBus) {
