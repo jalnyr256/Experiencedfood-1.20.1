@@ -42,6 +42,12 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("gameplay/fishing")).build() }, ModItems.RAW_PERCH.get()));
 
 
+        add("fish_from_fisher", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_fisher")).build() }, ModItems.RAW_PERCH.get()));
+        add("fish_from_fisher2", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_fisher")).build() }, ModItems.RAW_PIKE.get()));
+
+
 
         add("onion_from_plains", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_armorer")).build() }, ModItems.ONION.get()));

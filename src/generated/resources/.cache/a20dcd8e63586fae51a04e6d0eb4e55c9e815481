@@ -1,4 +1,6 @@
-// 1.20.1	2026-02-18T09:44:50.175161196	Global Loot Modifiers : experiencedfood
+// 1.20.1	2026-02-18T10:19:52.102777624	Global Loot Modifiers : experiencedfood
+ad8776d982cf3c1938b108bab875e021c167a58e data/experiencedfood/loot_modifiers/fish_from_fisher.json
+c67217d3e1431900733ea44d949e2392acc46a0c data/experiencedfood/loot_modifiers/fish_from_fisher2.json
 ce7a3e68aacbc0bb31850f6a600ccd76693d2c4e data/experiencedfood/loot_modifiers/kelp_from_cabbage.json
 d3346dffe2d1f330c002a9be851cce3c83270173 data/experiencedfood/loot_modifiers/onion_from_grass.json
 725ff7360953c3c5901fa953e1c5f5c83853bf6a data/experiencedfood/loot_modifiers/onion_from_plains.json
@@ -11,4 +13,4 @@ b406b942ec2ae15f4c06ab8bf1f789eb46941c93 data/experiencedfood/loot_modifiers/per
 96deec8cc0de594c84d171bad6b7375fffa04f82 data/experiencedfood/loot_modifiers/turnip_from_plains.json
 dd5ae2e131bcf7006765309ea199c21458874780 data/experiencedfood/loot_modifiers/turnip_from_savanna.json
 c5f823c0fc5b065eb1330bca2290f32553a215b4 data/experiencedfood/loot_modifiers/turnip_from_taiga.json
-d9689d44f8a0877b1202309ac020723f1e29063e data/forge/loot_modifiers/global_loot_modifiers.json
+05872717d56bc28a8ac815bec4be94d2b9930393 data/forge/loot_modifiers/global_loot_modifiers.json
