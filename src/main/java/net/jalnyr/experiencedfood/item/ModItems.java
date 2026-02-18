@@ -51,6 +51,10 @@ public class ModItems {
             ()-> new Item( new  Item.Properties().food(ModFoods.RAW_PIKE)));
     public static final RegistryObject<Item> COOKED_PIKE = ITEMS.register("cooked_pike",
             ()-> new Item( new  Item.Properties().food(ModFoods.COOKED_PIKE)));
+    public static final RegistryObject<Item> RAW_PERCH = ITEMS.register("raw_perch",
+            ()-> new Item( new  Item.Properties().food(ModFoods.RAW_PERCH)));
+    public static final RegistryObject<Item> COOKED_PERCH = ITEMS.register("cooked_perch",
+            ()-> new Item( new  Item.Properties().food(ModFoods.COOKED_PERCH)));
     public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
             ()-> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
@@ -62,6 +66,8 @@ public class ModItems {
             ()-> new ForgeSpawnEggItem(ModEntities.CARROT_GOLEM, 0x1e9630, 0xc1d1c5, new Item.Properties()));
     public static final RegistryObject<Item> PIKE_SPAWN_EGG = ITEMS.register("pike_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.PIKE, 0x1e3630, 0xc6d1c5, new Item.Properties()));
+    public static final RegistryObject<Item> PERCH_SPAWN_EGG = ITEMS.register("perch_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntities.PERCH, 0x2e3639, 0xc1d1c1, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

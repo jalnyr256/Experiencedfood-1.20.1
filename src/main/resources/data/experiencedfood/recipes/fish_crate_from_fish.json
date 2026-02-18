@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#xz",
+    "yt ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "experiencedfood:crate"
+    },
+    "x": {
+      "item": "experiencedfood:raw_perch"
+    },
+    "z": {
+      "item": "experiencedfood:raw_pike"
+    },
+    "y": {
+      "item": "minecraft:cod"
+    },
+    "t": {
+      "item": "minecraft:salmon"
+    }
+  },
+  "result": {
+    "item": "experiencedfood:fish_crate"
+  }
+}

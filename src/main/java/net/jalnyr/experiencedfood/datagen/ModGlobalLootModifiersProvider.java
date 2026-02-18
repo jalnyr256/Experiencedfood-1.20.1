@@ -38,6 +38,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
         add("pike_from_fishing", new AddFishingItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("gameplay/fishing")).build() }, ModItems.RAW_PIKE.get()));
+        add("perch_from_fishing", new AddFishingItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("gameplay/fishing")).build() }, ModItems.RAW_PERCH.get()));
+
 
 
         add("onion_from_plains", new AddItemModifier(new LootItemCondition[] {

@@ -11,6 +11,8 @@ public class ModFoods {
     public static final FoodProperties CHEESE = new FoodProperties.Builder().nutrition( 4).saturationMod(0.2f).build();
     public static final FoodProperties RAW_PIKE = new FoodProperties.Builder().nutrition( 3).saturationMod(0.2f).build();
     public static final FoodProperties COOKED_PIKE = new FoodProperties.Builder().nutrition( 8).saturationMod(0.8f).build();
+    public static final FoodProperties RAW_PERCH = new FoodProperties.Builder().nutrition( 3).saturationMod(0.2f).build();
+    public static final FoodProperties COOKED_PERCH = new FoodProperties.Builder().nutrition( 8).saturationMod(0.8f).build();
     public static final FoodProperties MEAT_SUPREME = new FoodProperties.Builder().nutrition( 16).saturationMod(1f).build();
     public static final FoodProperties HAMBURGER = new FoodProperties.Builder().nutrition( 16).saturationMod(1f).build();
     public static final FoodProperties VEGETABLE_SOUP = new FoodProperties.Builder().nutrition( 16).saturationMod(1f).build();
