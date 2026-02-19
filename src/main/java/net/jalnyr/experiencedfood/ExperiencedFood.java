@@ -6,6 +6,7 @@ import net.jalnyr.experiencedfood.entity.ModEntities;
 import net.jalnyr.experiencedfood.entity.client.CarrotGolemRenderer;
 import net.jalnyr.experiencedfood.entity.client.PerchRenderer;
 import net.jalnyr.experiencedfood.entity.client.PikeRenderer;
+import net.jalnyr.experiencedfood.entity.client.SaurosuchusRenderer;
 import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.jalnyr.experiencedfood.loot.ModLootModifiers;
@@ -85,6 +86,7 @@ public class ExperiencedFood
             EntityRenderers.register(ModEntities.CARROT_GOLEM.get(), CarrotGolemRenderer::new);
             EntityRenderers.register(ModEntities.PIKE.get(), PikeRenderer::new);
             EntityRenderers.register(ModEntities.PERCH.get(), PerchRenderer::new);
+            EntityRenderers.register(ModEntities.SAUROSUCHUS.get(), SaurosuchusRenderer::new);
         }
     }
 }

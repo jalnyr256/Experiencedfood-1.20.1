@@ -3,8 +3,13 @@ package net.jalnyr.experiencedfood.item;
 import net.jalnyr.experiencedfood.ExperiencedFood;
 import net.jalnyr.experiencedfood.block.ModBlocks;
 import net.jalnyr.experiencedfood.entity.ModEntities;
+import net.jalnyr.experiencedfood.entity.custom.PikeEntity;
 import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -13,6 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Properties;
+import java.util.function.Supplier;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -61,7 +67,6 @@ public class ModItems {
             ()-> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> CABBAGE_SEEDS = ITEMS.register("cabbage_seeds",
             ()-> new ItemNameBlockItem(ModBlocks.CABBAGE_CROP.get(), new  Item.Properties()));
-
     public static final RegistryObject<Item> CARROT_GOLEM_SPAWN_EGG = ITEMS.register("carrot_golem_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.CARROT_GOLEM, 0x1e9630, 0xc1d1c5, new Item.Properties()));
     public static final RegistryObject<Item> PIKE_SPAWN_EGG = ITEMS.register("pike_spawn_egg",
