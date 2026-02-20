@@ -19,17 +19,15 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Rabbit;
-import net.minecraft.world.entity.monster.Spider;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
 
 public class SaurosuchusEntity extends Animal {
 
     private static final EntityDataAccessor<Boolean> ATTACKING =
+            SynchedEntityData.defineId(SaurosuchusEntity.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<Boolean> SWINGING =
             SynchedEntityData.defineId(SaurosuchusEntity.class, EntityDataSerializers.BOOLEAN);
 
     private final ServerBossEvent bossEvent  = new ServerBossEvent(Component.literal("Saurosuchus"),
@@ -42,6 +40,8 @@ public class SaurosuchusEntity extends Animal {
     private int idleAnimationTimeout = 0;
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
+    public final AnimationState swingAnimationState = new AnimationState();
+    public int swingAnimationTimeout = 0;
 
 
     @Override
@@ -71,6 +71,18 @@ public class SaurosuchusEntity extends Animal {
         if(!this.isAttacking()) {
             attackAnimationState.stop();
         }
+
+
+        if (this.isSwinging() && swingAnimationTimeout <= 0) {
+            swingAnimationTimeout = 40;
+            swingAnimationState.start(this.tickCount);
+        } else {
+            --this.swingAnimationTimeout;
+        }
+
+        if(!this.isSwinging()) {
+            swingAnimationState.stop();
+        }
     }
 
     @Override
@@ -93,17 +105,24 @@ public class SaurosuchusEntity extends Animal {
         return this.entityData.get(ATTACKING);
     }
 
+    public void setSwinging(boolean swinging) {
+        this.entityData.set(SWINGING, swinging);
+    }
+
+    public boolean isSwinging() {
+        return this.entityData.get(SWINGING);
+    }
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(ATTACKING, false);
+        this.entityData.define(SWINGING, false);
     }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 20));
-
         this.goalSelector.addGoal(2, new SaurosuchusAttackGoal(this, 2, true));
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));

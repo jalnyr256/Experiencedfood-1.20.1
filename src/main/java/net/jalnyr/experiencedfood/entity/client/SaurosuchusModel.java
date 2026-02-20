@@ -585,6 +585,7 @@ public class SaurosuchusModel<T extends Entity> extends HierarchicalModel<T> {
         this.animateWalk(ModAnimationDefenitions.WALK, limbSwing, limbSwingAmount, 8f, 3f);
         this.animate(((SaurosuchusEntity) entity).idleAnimationState, ModAnimationDefenitions.SAUROIDLE, ageInTicks, 1f);
         this.animate(((SaurosuchusEntity) entity).attackAnimationState, ModAnimationDefenitions.CHOMP, ageInTicks, 1f);
+        this.animate(((SaurosuchusEntity) entity).swingAnimationState, ModAnimationDefenitions.TAILSWING, ageInTicks, 1f);
     }
 
     private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

@@ -31,7 +31,13 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
             shouldCountTillNextAttack = true;
 
             if(isTimeToStartAttackAnimation()) {
-                entity.setAttacking(true);
+                int randomNum = (int)(Math.random() * 3);
+                if (randomNum == 1) {
+                    entity.setAttacking(true);
+                }
+                else {
+                    entity.setSwinging(true);
+                }
             }
 
             if(isTimeToAttack()) {
@@ -42,6 +48,7 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
             resetAttackCooldown();
             shouldCountTillNextAttack = false;
             entity.setAttacking(false);
+            entity.setSwinging(false);
             entity.attackAnimationTimeout = 0;
         }
     }
@@ -84,6 +91,7 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
     @Override
     public void stop() {
         entity.setAttacking(false);
+        entity.setSwinging(false);
         super.stop();
     }
 }
