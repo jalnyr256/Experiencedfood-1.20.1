@@ -1,28 +1,26 @@
 package net.jalnyr.experiencedfood.entity.ai;
 
-import net.jalnyr.experiencedfood.entity.client.SaurosuchusModel;
 import net.jalnyr.experiencedfood.entity.custom.SaurosuchusEntity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.ai.behavior.MeleeAttack;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 
-public class SaurosuchusAttackGoal extends MeleeAttackGoal {
+public class SaurosuchusSwingGoal extends MeleeAttackGoal {
     private final SaurosuchusEntity entity;
-    private int attackDelay = 10;
-    private int ticksUntilNextAttack = 40;
+    private int attackDelay = 20;
+    private int ticksUntilNextAttack = 80;
     private boolean shouldCountTillNextAttack = false;
 
-    public SaurosuchusAttackGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
+    public SaurosuchusSwingGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
         super(pMob, pSpeedModifier, pFollowingTargetEvenIfNotSeen);
         entity = ((SaurosuchusEntity)pMob);
     }
     @Override
     public void start() {
         super.start();
-        attackDelay = 10;
-        ticksUntilNextAttack = 40;
+        attackDelay = 20;
+        ticksUntilNextAttack = 80;
     }
 
     @Override
@@ -31,13 +29,7 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
             shouldCountTillNextAttack = true;
 
             if(isTimeToStartAttackAnimation()) {
-                int randomNum = (int)(Math.random() * 3);
-                if (randomNum == 1) {
-                    entity.setAttacking(true);
-                }
-                else {
-                    entity.setSwinging(true);
-                }
+                entity.setSwinging(true);
             }
 
             if(isTimeToAttack()) {
@@ -47,7 +39,6 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
         } else {
             resetAttackCooldown();
             shouldCountTillNextAttack = false;
-            entity.setAttacking(false);
             entity.setSwinging(false);
             entity.attackAnimationTimeout = 0;
         }
@@ -90,11 +81,10 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
 
     @Override
     public void stop() {
-        entity.setAttacking(false);
         entity.setSwinging(false);
         super.stop();
     }
     protected double getAttackReachSqr(LivingEntity pAttackTarget) {
-        return (double)(this.mob.getBbWidth() * 4.0F * this.mob.getBbWidth() * 4.0F + pAttackTarget.getBbWidth());
+        return (double)(this.mob.getBbWidth() * 3.0F * this.mob.getBbWidth() * 3.0F + pAttackTarget.getBbWidth());
     }
 }

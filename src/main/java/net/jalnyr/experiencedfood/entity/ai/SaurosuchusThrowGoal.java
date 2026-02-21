@@ -1,20 +1,18 @@
 package net.jalnyr.experiencedfood.entity.ai;
 
-import net.jalnyr.experiencedfood.entity.client.SaurosuchusModel;
 import net.jalnyr.experiencedfood.entity.custom.SaurosuchusEntity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.ai.behavior.MeleeAttack;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 
-public class SaurosuchusAttackGoal extends MeleeAttackGoal {
+public class SaurosuchusThrowGoal extends MeleeAttackGoal {
     private final SaurosuchusEntity entity;
     private int attackDelay = 10;
     private int ticksUntilNextAttack = 40;
     private boolean shouldCountTillNextAttack = false;
 
-    public SaurosuchusAttackGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
+    public SaurosuchusThrowGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
         super(pMob, pSpeedModifier, pFollowingTargetEvenIfNotSeen);
         entity = ((SaurosuchusEntity)pMob);
     }

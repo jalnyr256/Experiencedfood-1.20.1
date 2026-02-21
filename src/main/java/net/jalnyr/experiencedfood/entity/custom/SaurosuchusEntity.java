@@ -1,6 +1,7 @@
 package net.jalnyr.experiencedfood.entity.custom;
 
 import net.jalnyr.experiencedfood.entity.ai.SaurosuchusAttackGoal;
+import net.jalnyr.experiencedfood.entity.ai.SaurosuchusSwingGoal;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -122,8 +123,9 @@ public class SaurosuchusEntity extends Animal {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 20));
-        this.goalSelector.addGoal(2, new SaurosuchusAttackGoal(this, 2, true));
+        this.goalSelector.addGoal(2, new SaurosuchusSwingGoal(this, 1, true));
+        this.goalSelector.addGoal(1, new SaurosuchusAttackGoal(this, 2, true));
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 20));
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
@@ -137,7 +139,7 @@ public class SaurosuchusEntity extends Animal {
                 .add(Attributes.FOLLOW_RANGE, 10D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
-                .add(Attributes.ATTACK_DAMAGE, 2f);
+                .add(Attributes.ATTACK_DAMAGE, 6f);
 
     }
     @Override
