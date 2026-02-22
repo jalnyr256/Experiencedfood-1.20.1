@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "experiencedfood:wild_farm",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 12984398,
+
+    "spacing": 20,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}
