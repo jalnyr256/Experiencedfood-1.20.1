@@ -29,6 +29,8 @@ public class ModItems {
             ()-> new ItemNameBlockItem(ModBlocks.SALAD_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> MAYONAISE = ITEMS.register("mayonaise",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TRIASSIC_HEART = ITEMS.register("triassic_heart",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARROT_SWORD = ITEMS.register("carrot_sword",
             ()-> new SwordItem(Tiers.WOOD, 4, 2, new Item.Properties()));
     public static final RegistryObject<Item> PEACEOFCARROT = ITEMS.register("peaceofcarrot",

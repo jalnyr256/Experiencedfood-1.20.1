@@ -11,8 +11,9 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 public class SaurosuchusAttackGoal extends MeleeAttackGoal {
     private final SaurosuchusEntity entity;
     private int attackDelay = 10;
-    private int ticksUntilNextAttack = 40;
+    private int ticksUntilNextAttack = 20;
     private boolean shouldCountTillNextAttack = false;
+    public boolean State1 = true;
 
     public SaurosuchusAttackGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
         super(pMob, pSpeedModifier, pFollowingTargetEvenIfNotSeen);
@@ -22,7 +23,7 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
     public void start() {
         super.start();
         attackDelay = 10;
-        ticksUntilNextAttack = 40;
+        ticksUntilNextAttack = 20;
     }
 
     @Override
@@ -31,12 +32,13 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
             shouldCountTillNextAttack = true;
 
             if(isTimeToStartAttackAnimation()) {
-                int randomNum = (int)(Math.random() * 3);
-                if (randomNum == 1) {
+                if (!State1){
                     entity.setAttacking(true);
+                    State1 = true;
                 }
-                else {
+                if (State1){
                     entity.setSwinging(true);
+                    State1 = false;
                 }
             }
 
@@ -50,6 +52,7 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
             entity.setAttacking(false);
             entity.setSwinging(false);
             entity.attackAnimationTimeout = 0;
+            entity.swingAnimationTimeout = 0;
         }
     }
 
@@ -93,8 +96,5 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
         entity.setAttacking(false);
         entity.setSwinging(false);
         super.stop();
-    }
-    protected double getAttackReachSqr(LivingEntity pAttackTarget) {
-        return (double)(this.mob.getBbWidth() * 4.0F * this.mob.getBbWidth() * 4.0F + pAttackTarget.getBbWidth());
     }
 }

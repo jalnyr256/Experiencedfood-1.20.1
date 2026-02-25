@@ -25,12 +25,14 @@
   "item.experiencedfood.pike_spawn_egg": "Pike Spawn Egg",
   "item.experiencedfood.perch_spawn_egg": "Perch Spawn Egg",
   "item.experiencedfood.pike_bucket": "Pike Bucket",
+  "item.experiencedfood.triassic_heart": "Triassic heart",
 
   "block.experiencedfood.turnip_crate": "Turnip Crate",
   "block.experiencedfood.crate": "Crate",
   "block.experiencedfood.onion_crate": "Onion Crate",
   "block.experiencedfood.fish_crate": "Fish Crate",
   "block.experiencedfood.onion_crop": "Onion Crop",
+  "sounds.experiencedfood.roar": "roar",
 
   "entity.experiencedfood.pike": "Pike",
   "entity.experiencedfood.perch": "Perch",

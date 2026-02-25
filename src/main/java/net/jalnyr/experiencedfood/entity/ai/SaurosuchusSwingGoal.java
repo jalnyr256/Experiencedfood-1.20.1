@@ -9,7 +9,7 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 public class SaurosuchusSwingGoal extends MeleeAttackGoal {
     private final SaurosuchusEntity entity;
     private int attackDelay = 20;
-    private int ticksUntilNextAttack = 80;
+    private int ticksUntilNextAttack = 20;
     private boolean shouldCountTillNextAttack = false;
 
     public SaurosuchusSwingGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
@@ -20,7 +20,7 @@ public class SaurosuchusSwingGoal extends MeleeAttackGoal {
     public void start() {
         super.start();
         attackDelay = 20;
-        ticksUntilNextAttack = 80;
+        ticksUntilNextAttack = 20;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class SaurosuchusSwingGoal extends MeleeAttackGoal {
             resetAttackCooldown();
             shouldCountTillNextAttack = false;
             entity.setSwinging(false);
-            entity.attackAnimationTimeout = 0;
+            entity.swingAnimationTimeout = 0;
         }
     }
 

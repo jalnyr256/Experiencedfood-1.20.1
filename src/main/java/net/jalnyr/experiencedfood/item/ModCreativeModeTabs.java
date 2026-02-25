@@ -43,6 +43,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.COOKED_PIKE.get());
                         pOutput.accept(ModItems.RAW_PERCH.get());
                         pOutput.accept(ModItems.COOKED_PERCH.get());
+                        pOutput.accept(ModItems.TRIASSIC_HEART.get());
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());
                         pOutput.accept(ModBlocks.ONION_CRATE.get());

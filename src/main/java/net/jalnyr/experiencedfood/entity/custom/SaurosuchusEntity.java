@@ -2,12 +2,14 @@ package net.jalnyr.experiencedfood.entity.custom;
 
 import net.jalnyr.experiencedfood.entity.ai.SaurosuchusAttackGoal;
 import net.jalnyr.experiencedfood.entity.ai.SaurosuchusSwingGoal;
+import net.jalnyr.experiencedfood.item.ModItems;
+import net.jalnyr.experiencedfood.sound.ModSounds;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerBossEvent;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -19,12 +21,13 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.world.level.block.state.BlockState;
 
-public class SaurosuchusEntity extends Animal {
+public class SaurosuchusEntity extends Monster {
 
     private static final EntityDataAccessor<Boolean> ATTACKING =
             SynchedEntityData.defineId(SaurosuchusEntity.class, EntityDataSerializers.BOOLEAN);
@@ -34,7 +37,7 @@ public class SaurosuchusEntity extends Animal {
     private final ServerBossEvent bossEvent  = new ServerBossEvent(Component.literal("Saurosuchus"),
             BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.NOTCHED_6);
 
-    public SaurosuchusEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    public SaurosuchusEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
     public final AnimationState idleAnimationState = new AnimationState();
@@ -122,45 +125,61 @@ public class SaurosuchusEntity extends Animal {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new SaurosuchusSwingGoal(this, 1, true));
-        this.goalSelector.addGoal(1, new SaurosuchusAttackGoal(this, 2, true));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 20));
+            this.goalSelector.addGoal(0, new FloatGoal(this));
+            this.goalSelector.addGoal(2, new SaurosuchusSwingGoal(this, 2D, true));
+        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+            this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 20f));
+            this.goalSelector.addGoal(1, new SaurosuchusAttackGoal(this, 1.5D, true));
+
+
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, false, false));
     }
 
 
     public static AttributeSupplier.Builder CreateAttributes() {
-        return createLivingAttributes()
+        return createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 600D)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
-                .add(Attributes.FOLLOW_RANGE, 10D)
+                .add(Attributes.FOLLOW_RANGE, 350.0D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
                 .add(Attributes.ATTACK_DAMAGE, 6f);
 
     }
     @Override
-    public @Nullable AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return null;
+    protected SoundEvent getAmbientSound() {
+        return ModSounds.SAUROSUCHUS_AMBIENT.get();
     }
 
     @Override
-    protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.CROP_PLANTED;
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return ModSounds.SAUROSUCHUS_HIT.get();
     }
 
     @Override
-    protected @Nullable SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.CROP_BREAK;
+    protected SoundEvent getDeathSound() {
+        return ModSounds.SAUROSUCHUS_DEATH.get();
+    }
+
+
+    protected SoundEvent getStepSound() {
+        return ModSounds.SAUROSUCHUS_STEP.get();
     }
 
     @Override
-    protected @Nullable SoundEvent getDeathSound() {
-        return SoundEvents.FROG_DEATH;
+    protected void playStepSound(BlockPos pPos, BlockState pBlock) {
+        this.playSound(this.getStepSound(), 0.15F, 1.0F);
     }
+
+    public MobType getMobType() {
+        return MobType.UNDEFINED;
+    }
+    protected Item getDefaultItem() {
+        return ModItems.TRIASSIC_HEART.get();
+    }
+
 
     @Override
     public void startSeenByPlayer(ServerPlayer pServerPlayer) {

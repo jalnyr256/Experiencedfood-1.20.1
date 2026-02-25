@@ -1,0 +1,32 @@
+{
+  "saurosuchus_roar": {
+    "subtitles": "sounds.experiencedfood.saurosuchus_roar",
+    "sounds": [
+      "experiencedfood:saurosuchus_roar"
+    ]
+  },
+  "saurosuchus_ambient": {
+    "subtitles": "sounds.experiencedfood.saurosuchus_ambientt",
+    "sounds": [
+      "experiencedfood:saurosuchus_ambient"
+    ]
+  },
+  "saurosuchus_death": {
+    "subtitles": "sounds.experiencedfood.saurosuchus_death",
+    "sounds": [
+      "experiencedfood:saurosuchus_death"
+    ]
+  },
+  "saurosuchus_hit": {
+    "subtitles": "sounds.experiencedfood.saurosuchus_hit",
+    "sounds": [
+      "experiencedfood:saurosuchus_hit"
+    ]
+  },
+  "saurosuchus_step": {
+    "subtitles": "sounds.experiencedfood.saurosuchus_step",
+    "sounds": [
+      "experiencedfood:saurosuchus_step"
+    ]
+  }
+}

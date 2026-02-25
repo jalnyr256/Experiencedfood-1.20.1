@@ -10,6 +10,7 @@ import net.jalnyr.experiencedfood.entity.client.SaurosuchusRenderer;
 import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.jalnyr.experiencedfood.loot.ModLootModifiers;
+import net.jalnyr.experiencedfood.sound.ModSounds;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -43,6 +44,8 @@ public class ExperiencedFood
         ModBlocks.register(modEventBus);
         ModLootModifiers.register(modEventBus);
         ModEntities.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
