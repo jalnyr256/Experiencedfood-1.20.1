@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "experiencedfood:spruce_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 12984398,
+
+    "spacing": 20,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}

@@ -21,13 +21,15 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class SaurosuchusEntity extends Monster {
+public class SaurosuchusEntity extends Monster implements Enemy {
+
 
     private static final EntityDataAccessor<Boolean> ATTACKING =
             SynchedEntityData.defineId(SaurosuchusEntity.class, EntityDataSerializers.BOOLEAN);
@@ -42,6 +44,8 @@ public class SaurosuchusEntity extends Monster {
     }
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+    public final AnimationState spawnAnimationState = new AnimationState();
+    private int spawnAnimationTimeout = 0;
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
     public final AnimationState swingAnimationState = new AnimationState();
@@ -127,7 +131,7 @@ public class SaurosuchusEntity extends Monster {
     protected void registerGoals() {
             this.goalSelector.addGoal(0, new FloatGoal(this));
             this.goalSelector.addGoal(2, new SaurosuchusSwingGoal(this, 2D, true));
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+            this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
             this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 20f));
             this.goalSelector.addGoal(1, new SaurosuchusAttackGoal(this, 1.5D, true));
 
@@ -140,12 +144,12 @@ public class SaurosuchusEntity extends Monster {
 
     public static AttributeSupplier.Builder CreateAttributes() {
         return createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 600D)
+                .add(Attributes.MAX_HEALTH, 1200D)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.FOLLOW_RANGE, 350.0D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
-                .add(Attributes.ATTACK_DAMAGE, 6f);
+                .add(Attributes.ATTACK_DAMAGE, 10f);
 
     }
     @Override
