@@ -149,6 +149,7 @@ public class SaurosuchusEntity extends Monster implements Enemy {
                 .add(Attributes.FOLLOW_RANGE, 350.0D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 10f)
                 .add(Attributes.ATTACK_DAMAGE, 10f);
 
     }

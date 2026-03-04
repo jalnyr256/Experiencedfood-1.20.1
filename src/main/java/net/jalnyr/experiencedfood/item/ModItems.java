@@ -31,6 +31,8 @@ public class ModItems {
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TRIASSIC_HEART = ITEMS.register("triassic_heart",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RYE = ITEMS.register("rye",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TRIASSIC_KEY_FRAGMENT = ITEMS.register("triassic_key_fragment",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARROT_SWORD = ITEMS.register("carrot_sword",
@@ -71,6 +73,8 @@ public class ModItems {
             ()-> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> CABBAGE_SEEDS = ITEMS.register("cabbage_seeds",
             ()-> new ItemNameBlockItem(ModBlocks.CABBAGE_CROP.get(), new  Item.Properties()));
+    public static final RegistryObject<Item> RYE_SEEDS = ITEMS.register("rye_seeds",
+            ()-> new ItemNameBlockItem(ModBlocks.RYE_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> CARROT_GOLEM_SPAWN_EGG = ITEMS.register("carrot_golem_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.CARROT_GOLEM, 0x1e9630, 0xc1d1c5, new Item.Properties()));
     public static final RegistryObject<Item> PIKE_SPAWN_EGG = ITEMS.register("pike_spawn_egg",
