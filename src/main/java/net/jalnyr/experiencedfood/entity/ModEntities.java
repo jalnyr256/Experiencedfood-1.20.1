@@ -2,10 +2,7 @@ package net.jalnyr.experiencedfood.entity;
 
 import net.jalnyr.experiencedfood.ExperiencedFood;
 import net.jalnyr.experiencedfood.entity.client.PikeRenderer;
-import net.jalnyr.experiencedfood.entity.custom.CarrotGolemEntity;
-import net.jalnyr.experiencedfood.entity.custom.PerchEntity;
-import net.jalnyr.experiencedfood.entity.custom.PikeEntity;
-import net.jalnyr.experiencedfood.entity.custom.SaurosuchusEntity;
+import net.jalnyr.experiencedfood.entity.custom.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +28,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SaurosuchusEntity>> SAUROSUCHUS =
             ENTITY_TYPES.register("saurosuchus", ()-> EntityType.Builder.of(SaurosuchusEntity::new, MobCategory.MONSTER)
                     .sized(3f, 4f).build("saurosuchus"));
+    public static final RegistryObject<EntityType<AllosaurusEntity>> ALLOSAURUS =
+            ENTITY_TYPES.register("allosaurus", ()-> EntityType.Builder.of(AllosaurusEntity::new, MobCategory.MONSTER)
+                    .sized(3f, 4f).build("allosaurus"));
 
 
     public static void register(IEventBus eventBus) {

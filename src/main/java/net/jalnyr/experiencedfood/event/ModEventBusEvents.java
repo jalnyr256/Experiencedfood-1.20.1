@@ -3,10 +3,7 @@ package net.jalnyr.experiencedfood.event;
 import net.jalnyr.experiencedfood.ExperiencedFood;
 
 import net.jalnyr.experiencedfood.entity.ModEntities;
-import net.jalnyr.experiencedfood.entity.custom.CarrotGolemEntity;
-import net.jalnyr.experiencedfood.entity.custom.PerchEntity;
-import net.jalnyr.experiencedfood.entity.custom.PikeEntity;
-import net.jalnyr.experiencedfood.entity.custom.SaurosuchusEntity;
+import net.jalnyr.experiencedfood.entity.custom.*;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,5 +16,6 @@ public class ModEventBusEvents {
         event.put(ModEntities.PIKE.get(), PikeEntity.CreateAttributes().build());
         event.put(ModEntities.PERCH.get(), PerchEntity.CreateAttributes().build());
         event.put(ModEntities.SAUROSUCHUS.get(), SaurosuchusEntity.CreateAttributes().build());
+        event.put(ModEntities.ALLOSAURUS.get(), AllosaurusEntity.CreateAttributes().build());
     }
 }

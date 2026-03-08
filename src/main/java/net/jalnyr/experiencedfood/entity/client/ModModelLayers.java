@@ -13,6 +13,9 @@ public class ModModelLayers {
             new ResourceLocation(ExperiencedFood.MOD_ID, "perch_layer"), "main");
     public static final ModelLayerLocation SAUROSUCHUS_LAYER = new ModelLayerLocation(
             new ResourceLocation(ExperiencedFood.MOD_ID, "saurosuchus_layer"), "main");
+    public static final ModelLayerLocation ALLOSAURUS_LAYER = new ModelLayerLocation(
+            new ResourceLocation(ExperiencedFood.MOD_ID, "allosaurus_layer"), "main");
+
 
 
 }
