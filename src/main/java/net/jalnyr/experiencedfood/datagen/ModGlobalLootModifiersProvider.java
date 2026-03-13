@@ -29,6 +29,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("onion_from_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.ONION_SEEDS.get()));
+        add("rye_from_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.RYE_SEEDS.get()));
         add("kelp_from_cabbage", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.KELP).build(),
                 LootItemRandomChanceCondition.randomChance(0.11f).build()}, ModItems.CABBAGE_SEEDS.get()));

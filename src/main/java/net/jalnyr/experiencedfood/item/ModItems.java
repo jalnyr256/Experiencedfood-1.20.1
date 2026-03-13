@@ -63,6 +63,8 @@ public class ModItems {
             ()-> new Item( new  Item.Properties().food(ModFoods.RAW_PIKE)));
     public static final RegistryObject<Item> COOKED_PIKE = ITEMS.register("cooked_pike",
             ()-> new Item( new  Item.Properties().food(ModFoods.COOKED_PIKE)));
+    public static final RegistryObject<Item> RYE_BREAD = ITEMS.register("rye_bread",
+            ()-> new Item( new  Item.Properties().food(ModFoods.RYE_BREAD)));
     public static final RegistryObject<Item> RAW_PERCH = ITEMS.register("raw_perch",
             ()-> new Item( new  Item.Properties().food(ModFoods.RAW_PERCH)));
     public static final RegistryObject<Item> COOKED_PERCH = ITEMS.register("cooked_perch",

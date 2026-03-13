@@ -20,9 +20,8 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.behavior.FollowTemptation;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Enemy;
@@ -41,7 +40,7 @@ public class AllosaurusEntity extends Monster implements Enemy {
             SynchedEntityData.defineId(AllosaurusEntity.class, EntityDataSerializers.BOOLEAN);
 
     private final ServerBossEvent bossEvent  = new ServerBossEvent(Component.literal("Allosaurus"),
-            BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.NOTCHED_6);
+            BossEvent.BossBarColor.GREEN, BossEvent.BossBarOverlay.NOTCHED_6);
 
     public AllosaurusEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -132,6 +131,8 @@ public class AllosaurusEntity extends Monster implements Enemy {
     @Override
     protected void registerGoals() {
             this.goalSelector.addGoal(0, new FloatGoal(this));
+            this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1f));
+            this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1f, true));
             this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
             this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 20f));
 
