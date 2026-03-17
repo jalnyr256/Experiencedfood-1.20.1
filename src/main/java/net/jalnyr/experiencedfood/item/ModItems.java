@@ -33,7 +33,7 @@ public class ModItems {
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
             ()-> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TRIASSIC_KEY_FRAGMENT = ITEMS.register("triassic_key_fragment",
+    public static final RegistryObject<Item> TRIASSIC_PAPER = ITEMS.register("triassic_paper",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARROT_SWORD = ITEMS.register("carrot_sword",
             ()-> new SwordItem(Tiers.WOOD, 4, 2, new Item.Properties()));
