@@ -14,6 +14,7 @@ public class ModEventBusEvents {
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.CARROT_GOLEM.get(), CarrotGolemEntity.CreateAttributes().build());
         event.put(ModEntities.PIKE.get(), PikeEntity.CreateAttributes().build());
+        event.put(ModEntities.SQUIRREL.get(), SquirrelEntity.CreateAttributes().build());
         event.put(ModEntities.PERCH.get(), PerchEntity.CreateAttributes().build());
         event.put(ModEntities.SAUROSUCHUS.get(), SaurosuchusEntity.CreateAttributes().build());
         event.put(ModEntities.ALLOSAURUS.get(), AllosaurusEntity.CreateAttributes().build());

@@ -9,6 +9,8 @@ public class ModModelLayers {
             new ResourceLocation(ExperiencedFood.MOD_ID, "carrot_golem_layer"), "main");
     public static final ModelLayerLocation PIKE_LAYER = new ModelLayerLocation(
             new ResourceLocation(ExperiencedFood.MOD_ID, "pike_layer"), "main");
+    public static final ModelLayerLocation SQUIRREL_LAYER = new ModelLayerLocation(
+            new ResourceLocation(ExperiencedFood.MOD_ID, "squirrel_layer"), "main");
     public static final ModelLayerLocation PERCH_LAYER = new ModelLayerLocation(
             new ResourceLocation(ExperiencedFood.MOD_ID, "perch_layer"), "main");
     public static final ModelLayerLocation SAUROSUCHUS_LAYER = new ModelLayerLocation(
