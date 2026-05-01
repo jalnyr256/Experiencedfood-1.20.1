@@ -20,7 +20,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.Properties;
 import java.util.function.Supplier;
 
-public class ModItems {
+public class
+ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExperiencedFood.MOD_ID);
     public static final RegistryObject<Item> BAGUETTE = ITEMS.register("baguette",
@@ -67,6 +68,10 @@ public class ModItems {
             ()-> new Item( new  Item.Properties().food(ModFoods.RYE_BREAD)));
     public static final RegistryObject<Item> RAW_PERCH = ITEMS.register("raw_perch",
             ()-> new Item( new  Item.Properties().food(ModFoods.RAW_PERCH)));
+    public static final RegistryObject<Item> RAW_SQUIRREL = ITEMS.register("raw_squirrel",
+            ()-> new Item( new  Item.Properties().food(ModFoods.RAW_SQUIRREL)));
+    public static final RegistryObject<Item> COOKED_SQUIRREL = ITEMS.register("cooked_squirrel",
+            ()-> new Item( new  Item.Properties().food(ModFoods.COOKED_SQUIRREL)));
     public static final RegistryObject<Item> COOKED_PERCH = ITEMS.register("cooked_perch",
             ()-> new Item( new  Item.Properties().food(ModFoods.COOKED_PERCH)));
     public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
@@ -83,6 +88,8 @@ public class ModItems {
             ()-> new ForgeSpawnEggItem(ModEntities.PIKE, 0x1e3630, 0xc6d1c5, new Item.Properties()));
     public static final RegistryObject<Item> PERCH_SPAWN_EGG = ITEMS.register("perch_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.PERCH, 0x2e3639, 0xc1d1c1, new Item.Properties()));
+    public static final RegistryObject<Item> SQUIRREL_SPAWN_EGG = ITEMS.register("squirrel_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntities.SQUIRREL, 0xFFF87E, 0x8FF1D7, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

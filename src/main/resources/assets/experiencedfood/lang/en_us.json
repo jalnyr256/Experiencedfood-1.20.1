@@ -24,9 +24,12 @@
   "item.experiencedfood.cooked_pike": "Cooked Pike",
   "item.experiencedfood.raw_perch": "Raw Perch",
   "item.experiencedfood.cooked_perch": "Cooked Perch",
+  "item.experiencedfood.raw_squirrel": "Raw Squirrel",
+  "item.experiencedfood.cooked_squirrel": "Cooked Squirrel",
   "item.experiencedfood.carrot_golem_spawn_egg": "Carrot Golem Spawn Egg",
   "item.experiencedfood.pike_spawn_egg": "Pike Spawn Egg",
   "item.experiencedfood.perch_spawn_egg": "Perch Spawn Egg",
+  "item.experiencedfood.squirrel_spawn_egg": "Squirrel Spawn Egg",
   "item.experiencedfood.pike_bucket": "Pike Bucket",
   "item.experiencedfood.triassic_heart": "Triassic heart",
   "item.experiencedfood.triassic_paper": "Triassic Paper",
@@ -40,6 +43,7 @@
 
   "entity.experiencedfood.pike": "Pike",
   "entity.experiencedfood.perch": "Perch",
+  "entity.experiencedfood.squirrel": "Squirrel",
   "entity.experiencedfood.saurosuchus": "Saurosuchus",
 
   "creativetab.experiencedfood": "Experienced Food"

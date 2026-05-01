@@ -68,7 +68,7 @@ public class SquirrelEntity extends Animal {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new PanicGoal(this, 8D));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 2D));
         this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.1D));
         this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 3f));

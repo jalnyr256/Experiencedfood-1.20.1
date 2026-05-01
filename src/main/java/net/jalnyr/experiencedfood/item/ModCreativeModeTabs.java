@@ -42,10 +42,13 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CARROT_GOLEM_SPAWN_EGG.get());
                         pOutput.accept(ModItems.PIKE_SPAWN_EGG.get());
                         pOutput.accept(ModItems.PERCH_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.SQUIRREL_SPAWN_EGG.get());
                         pOutput.accept(ModItems.RAW_PIKE.get());
                         pOutput.accept(ModItems.COOKED_PIKE.get());
                         pOutput.accept(ModItems.RAW_PERCH.get());
                         pOutput.accept(ModItems.COOKED_PERCH.get());
+                        pOutput.accept(ModItems.RAW_SQUIRREL.get());
+                        pOutput.accept(ModItems.COOKED_SQUIRREL.get());
                         pOutput.accept(ModItems.TRIASSIC_HEART.get());
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());
