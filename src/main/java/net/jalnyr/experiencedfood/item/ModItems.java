@@ -36,10 +36,12 @@ ModItems {
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PENGUIN_EGG = ITEMS.register("penguin_egg",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SQUIRREL_LEATHER = ITEMS.register("squirrel_leather",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TRIASSIC_PAPER = ITEMS.register("triassic_paper",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARROT_SWORD = ITEMS.register("carrot_sword",
-            ()-> new SwordItem(Tiers.WOOD, 4, 2, new Item.Properties()));
+            ()-> new SwordItem(Tiers.WOOD, 4, 0, new Item.Properties()));
     public static final RegistryObject<Item> PEACEOFCARROT = ITEMS.register("peaceofcarrot",
             ()-> new Item(new Item.Properties().food(ModFoods.PIECEOFCARROT)));
     public static final RegistryObject<Item> PENGUIN_OMELETTE = ITEMS.register("penguin_omelette",
@@ -97,6 +99,14 @@ ModItems {
     public static final RegistryObject<Item> PENGUIN_SPAWN_EGG = ITEMS.register("penguin_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.PENGUIN, 0xFFFFFF, 0x000000, new Item.Properties()));
 
+    public static final RegistryObject<Item> SQUIRREL_LEATHER_HELMET = ITEMS.register("squirrel_leather_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.SQUIRREL_LEATHER, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SQUIRREL_LEATHER_CHESTPLATE = ITEMS.register("squirrel_leather_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.SQUIRREL_LEATHER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SQUIRREL_LEATHER_LEGGINGS = ITEMS.register("squirrel_leather_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.SQUIRREL_LEATHER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SQUIRREL_LEATHER_BOOTS = ITEMS.register("squirrel_leather_boots",
+            ()-> new ArmorItem(ModArmorMaterials.SQUIRREL_LEATHER, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

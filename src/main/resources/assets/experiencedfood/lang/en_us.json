@@ -28,6 +28,7 @@
   "item.experiencedfood.cooked_perch": "Cooked Perch",
   "item.experiencedfood.raw_squirrel": "Raw Squirrel",
   "item.experiencedfood.cooked_squirrel": "Cooked Squirrel",
+  "item.experiencedfood.squirrel_leather": "Squirrel Leather",
   "item.experiencedfood.carrot_golem_spawn_egg": "Carrot Golem Spawn Egg",
   "item.experiencedfood.pike_spawn_egg": "Pike Spawn Egg",
   "item.experiencedfood.perch_spawn_egg": "Perch Spawn Egg",
@@ -36,6 +37,11 @@
   "item.experiencedfood.pike_bucket": "Pike Bucket",
   "item.experiencedfood.triassic_heart": "Triassic heart",
   "item.experiencedfood.triassic_paper": "Triassic Paper",
+
+  "item.experiencedfood.squirrel_leather_helmet": "Squirrel Helmet",
+  "item.experiencedfood.squirrel_leather_chestplate": "Squirrel Chestplate",
+  "item.experiencedfood.squirrel_leather_leggings": "Squirrel Leggings",
+  "item.experiencedfood.squirrel_leather_boots": "Squirrel Boots",
 
   "block.experiencedfood.turnip_crate": "Turnip Crate",
   "block.experiencedfood.crate": "Crate",

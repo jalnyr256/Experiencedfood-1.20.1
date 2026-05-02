@@ -36,7 +36,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.KELP).build(),
                 LootItemRandomChanceCondition.randomChance(0.11f).build()}, ModItems.CABBAGE_SEEDS.get()));
         add("turnip_from_plains", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_weaponsmith")).build() }, ModItems.TURNIP.get()));
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_weaponsmith")).build()}, ModItems.TURNIP.get()));
 
 
         add("pike_from_fishing", new AddFishingItemModifier(new LootItemCondition[] {
@@ -57,10 +57,10 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("turnip_from_taiga", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_toolsmith")).build() }, ModItems.TURNIP.get()));
         add("onion_from_taiga", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_taiga_house")).build() }, ModItems.ONION.get()));
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_taiga_house")).build() }, ModItems.SALAD.get()));
         add("turnip_from_savanna", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_savanna_house")).build() }, ModItems.TURNIP.get()));
         add("onion_from_savanna", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_savanna_house")).build() }, ModItems.ONION.get()));
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_savanna_house")).build() }, ModItems.CABBAGE.get()));
     }
 }

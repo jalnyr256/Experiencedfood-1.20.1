@@ -52,7 +52,14 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.COOKED_PERCH.get());
                         pOutput.accept(ModItems.RAW_SQUIRREL.get());
                         pOutput.accept(ModItems.COOKED_SQUIRREL.get());
+                        pOutput.accept(ModItems.SQUIRREL_LEATHER.get());
                         pOutput.accept(ModItems.TRIASSIC_HEART.get());
+
+                        pOutput.accept(ModItems.SQUIRREL_LEATHER_HELMET.get());
+                        pOutput.accept(ModItems.SQUIRREL_LEATHER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.SQUIRREL_LEATHER_LEGGINGS.get());
+                        pOutput.accept(ModItems.SQUIRREL_LEATHER_BOOTS.get());
+
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());
                         pOutput.accept(ModBlocks.ONION_CRATE.get());

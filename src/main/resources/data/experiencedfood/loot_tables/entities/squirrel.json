@@ -25,6 +25,32 @@
           "name": "experiencedfood:raw_squirrel"
         }
       ],
+      "rolls": 2.0
+    },
+    {
+      "bonus_rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "flags": {
+                      "is_on_fire": true
+                    }
+                  }
+                }
+              ],
+              "function": "minecraft:furnace_smelt"
+            }
+          ],
+          "name": "experiencedfood:squirrel_leather"
+        }
+      ],
       "rolls": 1.0
     }
   ],
