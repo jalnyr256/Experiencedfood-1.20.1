@@ -39,6 +39,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.RYE.get());
                         pOutput.accept(ModItems.RYE_BREAD.get());
                         pOutput.accept(ModItems.VEGETABLE_SOUP.get());
+                        pOutput.accept(ModItems.PENGUIN_EGG.get());
+                        pOutput.accept(ModItems.PENGUIN_OMELETTE.get());
                         pOutput.accept(ModItems.CARROT_GOLEM_SPAWN_EGG.get());
                         pOutput.accept(ModItems.PIKE_SPAWN_EGG.get());
                         pOutput.accept(ModItems.PERCH_SPAWN_EGG.get());

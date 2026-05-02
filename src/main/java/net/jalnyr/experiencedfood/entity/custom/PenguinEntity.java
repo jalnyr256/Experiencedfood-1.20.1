@@ -56,9 +56,10 @@ public class PenguinEntity extends Animal {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 10D, 10));
         this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.1D));
+        this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1.3D));
         this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 3f));
     }
 
@@ -87,17 +88,17 @@ public class PenguinEntity extends Animal {
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.CROP_PLANTED;
+        return SoundEvents.TURTLE_AMBIENT_LAND;
     }
 
     @Override
     protected @Nullable SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.CROP_BREAK;
+        return SoundEvents.TURTLE_HURT;
     }
 
     @Override
     protected @Nullable SoundEvent getDeathSound() {
-        return SoundEvents.FROG_DEATH;
+        return SoundEvents.TURTLE_DEATH;
     }
 
 }

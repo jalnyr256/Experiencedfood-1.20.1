@@ -34,12 +34,16 @@ ModItems {
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PENGUIN_EGG = ITEMS.register("penguin_egg",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TRIASSIC_PAPER = ITEMS.register("triassic_paper",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARROT_SWORD = ITEMS.register("carrot_sword",
             ()-> new SwordItem(Tiers.WOOD, 4, 2, new Item.Properties()));
     public static final RegistryObject<Item> PEACEOFCARROT = ITEMS.register("peaceofcarrot",
             ()-> new Item(new Item.Properties().food(ModFoods.PIECEOFCARROT)));
+    public static final RegistryObject<Item> PENGUIN_OMELETTE = ITEMS.register("penguin_omelette",
+            ()-> new Item(new Item.Properties().food(ModFoods.PENGUIN_OMELETTE)));
     public static final RegistryObject<Item> MEAT_SUPREME = ITEMS.register("meat_supreme",
             ()-> new Item(new Item.Properties().food(ModFoods.MEAT_SUPREME)));
     public static final RegistryObject<Item> HAMBURGER = ITEMS.register("hamburger",
