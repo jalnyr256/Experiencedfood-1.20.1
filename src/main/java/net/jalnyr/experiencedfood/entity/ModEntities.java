@@ -25,6 +25,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SquirrelEntity>> SQUIRREL =
             ENTITY_TYPES.register("squirrel", ()-> EntityType.Builder.of(SquirrelEntity::new, MobCategory.CREATURE)
                     .sized(0.8f, 0.7f).build("squirrel"));
+    public static final RegistryObject<EntityType<PenguinEntity>> PENGUIN =
+            ENTITY_TYPES.register("penguin", ()-> EntityType.Builder.of(PenguinEntity::new, MobCategory.CREATURE)
+                    .sized(0.7f, 1.5f).build("penguin"));
     public static final RegistryObject<EntityType<PerchEntity>> PERCH =
             ENTITY_TYPES.register("perch", ()-> EntityType.Builder.of(PerchEntity::new, MobCategory.WATER_AMBIENT)
                     .sized(1f, 0.3f).build("perch"));

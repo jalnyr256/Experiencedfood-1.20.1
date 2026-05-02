@@ -17,6 +17,7 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.PERCH_LAYER, PerchModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SAUROSUCHUS_LAYER, SaurosuchusModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.ALLOSAURUS_LAYER, AllosaurusModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.PENGUIN_LAYER, PenguinModel::createBodyLayer);
     }
 
 }

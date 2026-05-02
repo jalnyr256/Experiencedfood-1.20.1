@@ -90,6 +90,8 @@ ModItems {
             ()-> new ForgeSpawnEggItem(ModEntities.PERCH, 0x2e3639, 0xc1d1c1, new Item.Properties()));
     public static final RegistryObject<Item> SQUIRREL_SPAWN_EGG = ITEMS.register("squirrel_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.SQUIRREL, 0xFFF87E, 0x8FF1D7, new Item.Properties()));
+    public static final RegistryObject<Item> PENGUIN_SPAWN_EGG = ITEMS.register("penguin_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntities.PENGUIN, 0xFFFFFF, 0x000000, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

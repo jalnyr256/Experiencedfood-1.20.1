@@ -23,9 +23,12 @@ public class ModEventBusEvents {
         event.put(ModEntities.PERCH.get(), PerchEntity.CreateAttributes().build());
         event.put(ModEntities.SAUROSUCHUS.get(), SaurosuchusEntity.CreateAttributes().build());
         event.put(ModEntities.ALLOSAURUS.get(), AllosaurusEntity.CreateAttributes().build());
+        event.put(ModEntities.PENGUIN.get(), PenguinEntity.CreateAttributes().build());
     }
     public static void entitySpawnRestriction(SpawnPlacementRegisterEvent event) {
         event.register(ModEntities.SQUIRREL.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING,
+                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+        event.register(ModEntities.PENGUIN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING,
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
         event.register(ModEntities.PIKE.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 AbstractFish::checkMobSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);

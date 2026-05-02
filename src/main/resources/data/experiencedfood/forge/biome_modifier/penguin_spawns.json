@@ -1,10 +1,11 @@
 {
   "type": "forge:add_spawns",
   "biomes": [
-    "minecraft:taiga"
+    "minecraft:snowy_plains",
+    "minecraft:stony_shore"
   ],
   "spawners": {
-    "type": "experiencedfood:squirrel",
+    "type": "experiencedfood:penguin",
     "weight": 50,
     "minCount": 2,
     "maxCount": 4

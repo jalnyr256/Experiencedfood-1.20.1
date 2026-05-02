@@ -89,6 +89,7 @@ public class ExperiencedFood
             EntityRenderers.register(ModEntities.SAUROSUCHUS.get(), SaurosuchusRenderer::new);
             EntityRenderers.register(ModEntities.ALLOSAURUS.get(), AllosaurusRenderer::new);
             EntityRenderers.register(ModEntities.SQUIRREL.get(), SquirrelRenderer::new);
+            EntityRenderers.register(ModEntities.PENGUIN.get(), PenguinRenderer::new);
         }
     }
 }
