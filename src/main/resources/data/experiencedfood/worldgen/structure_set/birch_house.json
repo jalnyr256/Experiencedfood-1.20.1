@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "experiencedfood:birch_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 129843410,
+
+    "spacing": 40,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}
