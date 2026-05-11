@@ -1,0 +1,11 @@
+// 1.20.1	2026-05-11T21:15:54.990148272	Loot Tables
+76d376f01e9fa323e5cbbd691767e625d287ed3d data/experiencedfood/loot_tables/blocks/cabbage_crop.json
+fa8b0e31e38811bb8f74abbbb65148404d533e0e data/experiencedfood/loot_tables/blocks/crate.json
+d377bd4c0b1f2d38dfa9523683dded2db7a43e1d data/experiencedfood/loot_tables/blocks/fish_crate.json
+4e8ac1de9c0ef8fdcdac936d8d0ef36fcbcd7c35 data/experiencedfood/loot_tables/blocks/onion_crate.json
+d0adc8ccdc758f335dbf688f417eaed75bb4fe2d data/experiencedfood/loot_tables/blocks/onion_crop.json
+aa2add36d46e6298d7ee5f60774990d7a6d3b43e data/experiencedfood/loot_tables/blocks/rye_crop.json
+3be140d520a75684d4a00345d2aa8ac51bb017d8 data/experiencedfood/loot_tables/blocks/salad_crop.json
+7c783006e9f4fba2c7029db418219cf43c8eba3b data/experiencedfood/loot_tables/blocks/turnip_crate.json
+a45d08f1e7e5b1fea946853c43ec8180b365fae8 data/experiencedfood/loot_tables/blocks/turnip_crop.json
+05e8a090c8003a443442dd0cb84d30f15511d049 data/experiencedfood/loot_tables/blocks/windmill.json

@@ -2,12 +2,16 @@ package net.jalnyr.experiencedfood;
 
 import com.mojang.logging.LogUtils;
 import net.jalnyr.experiencedfood.block.ModBlocks;
+import net.jalnyr.experiencedfood.block.entity.ModBlockEntities;
 import net.jalnyr.experiencedfood.entity.ModEntities;
 import net.jalnyr.experiencedfood.entity.client.*;
 import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.jalnyr.experiencedfood.loot.ModLootModifiers;
+import net.jalnyr.experiencedfood.screen.ModMenuTypes;
+import net.jalnyr.experiencedfood.screen.WindmillScreen;
 import net.jalnyr.experiencedfood.sound.ModSounds;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -43,6 +47,9 @@ public class ExperiencedFood
         ModEntities.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -90,6 +97,8 @@ public class ExperiencedFood
             EntityRenderers.register(ModEntities.ALLOSAURUS.get(), AllosaurusRenderer::new);
             EntityRenderers.register(ModEntities.SQUIRREL.get(), SquirrelRenderer::new);
             EntityRenderers.register(ModEntities.PENGUIN.get(), PenguinRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.WINDMILL_MENU.get(), WindmillScreen::new);
         }
     }
 }

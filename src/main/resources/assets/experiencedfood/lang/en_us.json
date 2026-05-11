@@ -48,6 +48,8 @@
   "block.experiencedfood.onion_crate": "Onion Crate",
   "block.experiencedfood.fish_crate": "Fish Crate",
   "block.experiencedfood.onion_crop": "Onion Crop",
+  "block.experiencedfood.windmill": "Windmill",
+
   "sounds.experiencedfood.roar": "roar",
 
   "entity.experiencedfood.pike": "Pike",
