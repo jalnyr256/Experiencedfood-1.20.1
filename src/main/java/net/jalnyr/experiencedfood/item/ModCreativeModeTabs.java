@@ -37,7 +37,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CABBAGE_SEEDS.get());
                         pOutput.accept(ModItems.RYE_SEEDS.get());
                         pOutput.accept(ModItems.RYE.get());
+                        pOutput.accept(ModItems.RYE_FLOUR.get());
                         pOutput.accept(ModItems.RYE_BREAD.get());
+                        pOutput.accept(ModItems.UNBAKED_RYE_BREAD.get());
                         pOutput.accept(ModItems.VEGETABLE_SOUP.get());
                         pOutput.accept(ModItems.PENGUIN_EGG.get());
                         pOutput.accept(ModItems.PENGUIN_OMELETTE.get());
@@ -62,6 +64,7 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.TURNIP_CRATE.get());
                         pOutput.accept(ModBlocks.CRATE.get());
+                        pOutput.accept(ModBlocks.WINDMILL.get());
                         pOutput.accept(ModBlocks.ONION_CRATE.get());
                         pOutput.accept(ModBlocks.FISH_CRATE.get());
                     })

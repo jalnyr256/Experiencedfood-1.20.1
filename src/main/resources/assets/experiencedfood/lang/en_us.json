@@ -18,9 +18,11 @@
   "item.experiencedfood.cabbage_seeds": "Cabbage Seeds",
   "item.experiencedfood.rye_seeds": "Rye Seeds",
   "item.experiencedfood.rye": "Rye",
+  "item.experiencedfood.rye_flour": "Rye Flour",
   "item.experiencedfood.penguin_egg": "Penguin Egg",
   "item.experiencedfood.penguin_omelette": "Penguin Omelette",
   "item.experiencedfood.rye_bread": "Rye Bread",
+  "item.experiencedfood.unbaked_rye_bread": "Unbaked Rye Bread",
   "item.experiencedfood.vegetable_soup": "Vegetable Soup",
   "item.experiencedfood.raw_pike": "Raw Pike",
   "item.experiencedfood.cooked_pike": "Cooked Pike",
@@ -55,6 +57,7 @@
   "entity.experiencedfood.pike": "Pike",
   "entity.experiencedfood.perch": "Perch",
   "entity.experiencedfood.squirrel": "Squirrel",
+  "entity.experiencedfood.penguin": "Penguin",
   "entity.experiencedfood.saurosuchus": "Saurosuchus",
 
   "creativetab.experiencedfood": "Experienced Food"

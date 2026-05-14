@@ -8,10 +8,10 @@
   ],
   "key": {
     "#": {
-      "item": "experiencedfood:rye"
+      "item": "experiencedfood:rye_flour"
     }
   },
     "result": {
-      "item": "experiencedfood:rye_bread"
+      "item": "experiencedfood:unbaked_rye_bread"
     }
 }

@@ -139,7 +139,7 @@ public class WindmillBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.RYE_BREAD.get(), 1);
+        ItemStack result = new ItemStack(ModItems.RYE_FLOUR.get(), 1);
 
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
@@ -157,7 +157,7 @@ public class WindmillBlockEntity extends BlockEntity implements MenuProvider {
 
     private boolean hasRecipe() {
         boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.RYE.get();
-        ItemStack result = new ItemStack(ModItems.RYE_BREAD.get());
+        ItemStack result = new ItemStack(ModItems.RYE_FLOUR.get());
 
         return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }

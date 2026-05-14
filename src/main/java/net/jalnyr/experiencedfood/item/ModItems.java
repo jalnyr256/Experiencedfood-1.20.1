@@ -30,6 +30,8 @@ ModItems {
             ()-> new ItemNameBlockItem(ModBlocks.SALAD_CROP.get(), new  Item.Properties()));
     public static final RegistryObject<Item> MAYONAISE = ITEMS.register("mayonaise",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RYE_FLOUR = ITEMS.register("rye_flour",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TRIASSIC_HEART = ITEMS.register("triassic_heart",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
@@ -72,6 +74,8 @@ ModItems {
             ()-> new Item( new  Item.Properties().food(ModFoods.COOKED_PIKE)));
     public static final RegistryObject<Item> RYE_BREAD = ITEMS.register("rye_bread",
             ()-> new Item( new  Item.Properties().food(ModFoods.RYE_BREAD)));
+    public static final RegistryObject<Item> UNBAKED_RYE_BREAD = ITEMS.register("unbaked_rye_bread",
+            ()-> new Item( new  Item.Properties()));
     public static final RegistryObject<Item> RAW_PERCH = ITEMS.register("raw_perch",
             ()-> new Item( new  Item.Properties().food(ModFoods.RAW_PERCH)));
     public static final RegistryObject<Item> RAW_SQUIRREL = ITEMS.register("raw_squirrel",
