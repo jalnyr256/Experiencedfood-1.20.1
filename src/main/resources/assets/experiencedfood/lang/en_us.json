@@ -37,8 +37,8 @@
   "item.experiencedfood.squirrel_spawn_egg": "Squirrel Spawn Egg",
   "item.experiencedfood.penguin_spawn_egg": "Penguin Spawn Egg",
   "item.experiencedfood.pike_bucket": "Pike Bucket",
-  "item.experiencedfood.triassic_heart": "Triassic heart",
-  "item.experiencedfood.triassic_paper": "Triassic Paper",
+  "item.experiencedfood.triassic_heart": "§4§lTriassic heart",
+  "item.experiencedfood.triassic_paper": "§6§lTriassic Paper",
 
   "item.experiencedfood.squirrel_leather_helmet": "Squirrel Helmet",
   "item.experiencedfood.squirrel_leather_chestplate": "Squirrel Chestplate",
@@ -50,7 +50,7 @@
   "block.experiencedfood.onion_crate": "Onion Crate",
   "block.experiencedfood.fish_crate": "Fish Crate",
   "block.experiencedfood.onion_crop": "Onion Crop",
-  "block.experiencedfood.windmill": "Windmill",
+  "block.experiencedfood.windmill": "§6§lWindmill",
 
   "sounds.experiencedfood.roar": "roar",
 
@@ -58,7 +58,7 @@
   "entity.experiencedfood.perch": "Perch",
   "entity.experiencedfood.squirrel": "Squirrel",
   "entity.experiencedfood.penguin": "Penguin",
-  "entity.experiencedfood.saurosuchus": "Saurosuchus",
+  "entity.experiencedfood.saurosuchus": "§6§lSaurosuchus",
 
   "creativetab.experiencedfood": "Experienced Food"
 }

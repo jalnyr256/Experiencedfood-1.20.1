@@ -8,6 +8,7 @@ import net.jalnyr.experiencedfood.entity.client.*;
 import net.jalnyr.experiencedfood.item.ModCreativeModeTabs;
 import net.jalnyr.experiencedfood.item.ModItems;
 import net.jalnyr.experiencedfood.loot.ModLootModifiers;
+import net.jalnyr.experiencedfood.recipe.ModRecipes;
 import net.jalnyr.experiencedfood.screen.ModMenuTypes;
 import net.jalnyr.experiencedfood.screen.WindmillScreen;
 import net.jalnyr.experiencedfood.sound.ModSounds;
@@ -45,6 +46,7 @@ public class ExperiencedFood
         ModBlocks.register(modEventBus);
         ModLootModifiers.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         ModSounds.register(modEventBus);
 

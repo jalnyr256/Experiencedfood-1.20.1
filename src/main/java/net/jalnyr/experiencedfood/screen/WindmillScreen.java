@@ -21,8 +21,8 @@ public class WindmillScreen extends AbstractContainerScreen<WindmillMenu> {
     @Override
     protected void init() {
         super.init();
-        this.inventoryLabelY = 1000000;
-        this.titleLabelY = 1000000;
+        this.inventoryLabelY = -100;
+        this.titleLabelY = -10;
     }
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float pPartialTick, int pMouseX, int pMouseY) {

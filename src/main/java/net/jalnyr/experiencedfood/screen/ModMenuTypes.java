@@ -16,7 +16,7 @@ public class ModMenuTypes {
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, ExperiencedFood.MOD_ID);
 
     public static final RegistryObject<MenuType<WindmillMenu>> WINDMILL_MENU =
-            registerMenuType("gem_polishing_menu", WindmillMenu::new);
+            registerMenuType("windmill_menu", WindmillMenu::new);
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

@@ -1,0 +1,12 @@
+{
+  "type": "experiencedfood:windmill",
+  "ingredients": [
+    {
+      "item": "experiencedfood:rye"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "experiencedfood:rye_flour"
+  }
+}
