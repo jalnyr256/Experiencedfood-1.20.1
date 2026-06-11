@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#xy",
+    "z"
+  ],
+  "key": {
+    "x": {
+      "item": "experiencedfood:cooked_perch"
+    },
+    "#": {
+      "item": "minecraft:bowl"
+    },
+    "y": {
+      "item": "minecraft:potato"
+    },
+    "z": {
+      "item": "experiencedfood:cooked_pike"
+    },
+    "result": {
+      "item": "experiencedfood:fish_soup"
+    }
+  }
+}

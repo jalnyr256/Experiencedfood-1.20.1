@@ -52,6 +52,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.PENGUIN_SPAWN_EGG.get());
                         pOutput.accept(ModItems.RAW_PIKE.get());
                         pOutput.accept(ModItems.COOKED_PIKE.get());
+                        pOutput.accept(ModItems.FISH_SOUP.get());
                         pOutput.accept(ModItems.RAW_PERCH.get());
                         pOutput.accept(ModItems.COOKED_PERCH.get());
                         pOutput.accept(ModItems.RAW_SQUIRREL.get());

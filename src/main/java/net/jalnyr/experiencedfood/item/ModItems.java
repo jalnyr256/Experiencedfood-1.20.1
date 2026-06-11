@@ -58,6 +58,8 @@ ModItems {
             ()-> new Item(new Item.Properties().food(ModFoods.CHEESE)));
     public static final RegistryObject<Item> CARROT_SOUP = ITEMS.register("carrot_soup",
             ()-> new Item(new Item.Properties().food(ModFoods.CARROT_SOUP)));
+    public static final RegistryObject<Item> FISH_SOUP = ITEMS.register("fish_soup",
+            ()-> new Item(new Item.Properties().food(ModFoods.FISH_SOUP)));
     public static final RegistryObject<Item> VEGETABLE_SOUP = ITEMS.register("vegetable_soup",
             ()-> new Item(new Item.Properties().food(ModFoods.VEGETABLE_SOUP)));
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
