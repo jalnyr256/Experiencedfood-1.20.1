@@ -21,6 +21,12 @@ public class SaurosuchusAttackGoal extends MeleeAttackGoal {
     }
     @Override
     public void start() {
+        if (!entity.isSwinging()) {
+            entity.setAttacking(false);
+        }
+        else {
+            return;
+        }
         super.start();
         attackDelay = 10;
         ticksUntilNextAttack = 20;

@@ -134,6 +134,7 @@ public class SaurosuchusEntity extends Monster implements Enemy {
             this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
             this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 20f));
             this.goalSelector.addGoal(1, new SaurosuchusAttackGoal(this, 1.5D, true));
+            this.goalSelector.addGoal(2, new FollowMobGoal(this, 1, 1, 30));
 
 
 

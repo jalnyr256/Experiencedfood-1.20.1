@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "experiencedfood:wheat_flour"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "item": "experiencedfood:unbaked_bread"
+  },
+  "show_notification": true
+}

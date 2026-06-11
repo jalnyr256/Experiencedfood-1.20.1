@@ -1,0 +1,12 @@
+{
+  "type": "experiencedfood:windmill",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "experiencedfood:wheat_flour"
+  }
+}

@@ -32,6 +32,8 @@ ModItems {
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RYE_FLOUR = ITEMS.register("rye_flour",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WHEAT_FLOUR = ITEMS.register("wheat_flour",
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TRIASSIC_HEART = ITEMS.register("triassic_heart",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
@@ -75,6 +77,8 @@ ModItems {
     public static final RegistryObject<Item> RYE_BREAD = ITEMS.register("rye_bread",
             ()-> new Item( new  Item.Properties().food(ModFoods.RYE_BREAD)));
     public static final RegistryObject<Item> UNBAKED_RYE_BREAD = ITEMS.register("unbaked_rye_bread",
+            ()-> new Item( new  Item.Properties()));
+    public static final RegistryObject<Item> UNBAKED_BREAD = ITEMS.register("unbaked_bread",
             ()-> new Item( new  Item.Properties()));
     public static final RegistryObject<Item> RAW_PERCH = ITEMS.register("raw_perch",
             ()-> new Item( new  Item.Properties().food(ModFoods.RAW_PERCH)));

@@ -40,6 +40,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.RYE_FLOUR.get());
                         pOutput.accept(ModItems.RYE_BREAD.get());
                         pOutput.accept(ModItems.UNBAKED_RYE_BREAD.get());
+                        pOutput.accept(ModItems.WHEAT_FLOUR.get());
+                        pOutput.accept(ModItems.UNBAKED_BREAD.get());
                         pOutput.accept(ModItems.VEGETABLE_SOUP.get());
                         pOutput.accept(ModItems.PENGUIN_EGG.get());
                         pOutput.accept(ModItems.PENGUIN_OMELETTE.get());
